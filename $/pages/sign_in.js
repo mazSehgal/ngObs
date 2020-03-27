@@ -18,19 +18,16 @@ var main = document.createElement("main");
 var username = document.createElement("input");
 main.appendChild(username);
 username.type = "text";
-username.value = "test";
 
 var password = document.createElement("input");
 main.appendChild(password);
 password.type = "password";
-password.value = "test";
 
 var buttonSignIn = document.createElement("button");
 main.appendChild(buttonSignIn);
 buttonSignIn.textContent = "Sign In";
 buttonSignIn.onpointerdown = function () {
-	console.log(2);
-	alert(username.value + " " + password.value);
+	$.nav.load("Menu");
 };
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
@@ -46,7 +43,6 @@ function ssoTry () {
 	if (user !== "" && pass !== "") {
 		username.value = user;
 		password.value = pass;
-		console.log(1);
 		buttonSignIn.onpointerdown();
 	};
 
