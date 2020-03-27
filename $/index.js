@@ -1,5 +1,7 @@
 (function () {
 	
+	document.body.textContent = "";
+	
 	["fluids"].forEach(function ($v) {
 	
 		var button = document.createElement("button");
