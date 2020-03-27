@@ -48,6 +48,7 @@ setTimeout(function () {
 	
 	var loadList = [
 		"modules/navigate.js",
+		"modules/database.js",
 		"pages/menu.js",
 		"pages/sign_in.js",
 	];
