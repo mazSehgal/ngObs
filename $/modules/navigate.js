@@ -6,7 +6,7 @@
 		
 		if ($page !== undefined) {
 			historyList.push($page);
-		} else if (historyList.length > 2) 
+		} else if (historyList.length > 2) {
 			historyList.pop();
 			var rtn = historyList.slice(-1)[0];
 		};
