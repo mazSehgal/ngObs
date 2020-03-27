@@ -27,7 +27,9 @@ var buttonSignIn = document.createElement("button");
 main.appendChild(buttonSignIn);
 buttonSignIn.textContent = "Sign In";
 buttonSignIn.onpointerdown = function () {
-	$.nav.load("Menu");
+	$.db.query(["signIn", {}], function ($d) {
+		$.nav.load("Menu");
+	});
 };
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
