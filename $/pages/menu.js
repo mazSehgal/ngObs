@@ -1,4 +1,4 @@
-(function () {
+$.pages["Menu"] = (function () {
 	
 	function forward () {
 		back();
@@ -25,9 +25,9 @@
 		
 	});
 	
-	$.pages.menu = {
-		forward: forward,
-		back: back
+	return {
+		"forward": forward,
+		"back": back,
 	};
 	
 }())
