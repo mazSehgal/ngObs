@@ -12,9 +12,9 @@
 	header.style.flex = "0 0 auto";
 	header.style.display = "flex";
 
-		var div = document.createElement("div");
-		div.textContent = "A";
-		header.appendChild(div);
+		var button = document.createElement("button");
+		button.textContent = "<";
+		header.appendChild(button);
 
 		var div = document.createElement("div");
 		div.textContent = "A";
