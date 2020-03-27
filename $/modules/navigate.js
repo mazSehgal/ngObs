@@ -1,16 +1,30 @@
 (function () {
 	
-	var history = [];
+	var historyList = [];
+	
+	function history ($page) {
+		
+		if ($page !== undefined) {
+			historyList.push($page);
+		} else if (historyList.length > 2) 
+			historyList.pop();
+			var rtn = historyList.slice(-1)[0];
+		};
+		
+		document.querySelector("#buttonBack").style.visibility = (historyList.length > 2) ? "visible" : "hidden";
+	
+		return rtn;
+	
+	};
 	
 	function load ($page) {
-		history.push($page);
+		history($page);
 		$.pages[$page].forward();
 	};
 	
 	function back () {
-		if (history.length <= 2) return;
-		history.pop();
-		$.pages[history.slice(-1)[0]].back();
+		if (var page = history() === undefined) return;
+		$.pages[page].back();
 	};
 	
 	$.nav = {
