@@ -14,7 +14,7 @@ $.db = (function () {
 			if (xhr.status !== 200) return;
 			$ftn(xhr.responseText);
 		};
-		xhr.open("POST", $.const.root + "!/" + $in[0] + ".js", true);
+		xhr.open("POST", $.const.root + "!/" + $in[0] + ".txt", true);
 		xhr.send(JSON.stringify($in));
 		
 	};
