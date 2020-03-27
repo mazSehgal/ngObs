@@ -1,5 +1,7 @@
 (function () {
 
+	$.pages = {};
+	
 	[
 		"pages/menu.js"
 	].forEach(function ($v) {
