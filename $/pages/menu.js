@@ -11,15 +11,15 @@ $.pages["Menu"] = (function () {
 	var main = document.createElement("main");
 	
 	[
-		"fluids",
-		"fluids",
-		"fluids",
+		["Fluids Chart", "Fluids"],
+		["Fluids", "Fluids"],
+		["Fluids", "Fluids"],
 	].forEach(function ($v) {
 	
 		var button = document.createElement("button");
-		button.textContent = $v;
+		button.textContent = $v[0];
 		button.onpointerdown = function () {
-			alert($v);
+			$.nav.load($v[1]);
 		};
 		main.appendChild(button);
 		
