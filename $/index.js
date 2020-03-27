@@ -51,6 +51,7 @@ setTimeout(function () {
 		"modules/database.js",
 		"pages/menu.js",
 		"pages/sign_in.js",
+		"fluids/index.js",
 	];
 	
 	var counter = loadList.length;
@@ -61,6 +62,7 @@ setTimeout(function () {
 		script.onerror = script.onload;
 		script.onload = function () {
 			if (--counter > 0) return;
+			Object.keys(Ext).forEach(function ($v) { $.pages[Ext] = Ext[$v]; });
 			$.nav.load("Sign In");
 		};
 		document.head.appendChild(script);
