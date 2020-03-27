@@ -44,12 +44,13 @@ function ssoTry () {
 	var user = sso.querySelector("#user").value;
 	var pass = sso.querySelector("#pass").value;
 	if (user !== "" && pass !== "") {
+		counter = 0;
 		username.value = user;
 		password.value = pass;
 		buttonSignIn.onpointerdown();
 	};
 
-	if (--counter === 0) {
+	if (--counter <= 0) {
 		sso.parentNode.removeChild(sso);
 	} else {
 		setTimeout(ssoTry, 200);
