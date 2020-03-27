@@ -23,7 +23,16 @@
 					var script = document.createElement("script");
 					script.src = $.const.root + "$/index.js";
 					script.onerror = function () {
-						document.body.textContent = "Error!";
+						
+						document.body.style.alignItems = "center";
+						document.body.style.justifyContent = "center";
+					
+						var div = document.createElement("div");
+						document.body.appendChild(div);
+						div.style.border = "3px solid white";
+						div.style.padding = "10px";
+						div.textContent = "Error!";
+					
 					};
 					document.head.appendChild(script);
 
@@ -35,7 +44,7 @@
 		
 	</head>
 	
-  	<body>
+  	<body style="font-family:Arial; background-color:lightgrey; margin:0; height:100%; display:flex; flex-direction:column;">
 	
 		<div id="sso" style="width:0; height:0; overflow:hidden;">
 			<input type="text" id="user" />
