@@ -20,14 +20,10 @@
 
 				window.onload = function () {
 
-					if (window.navigator.standalone == false) {
-						alert("Apps work best when launched from the home screen");
-					};
-
 					var script = document.createElement("script");
 					script.src = $.const.root + "$/index.js";
 					script.onerror = function () {
-						document.querySelector("main").textContent = "Error!";
+						document.body.textContent = "Error!";
 					};
 					document.head.appendChild(script);
 
@@ -39,16 +35,12 @@
 		
 	</head>
 	
-  	<body style="font-family:Arial; background-color:lightgrey; margin:0; height:100%; display:flex; flex-direction:column;">
+  	<body>
 	
 		<div style="width:0; height:0; overflow:hidden;">
 			<input type="text" id="user" />
 			<input type="password" id="pass" />
 		</div>
-		
-		<header style="flex:0 0 auto; display:flex;"></header>
-		
-		<main style="flex:1 1 auto; display:flex;"></main>
 		
 	</body>
 	
