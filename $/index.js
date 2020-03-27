@@ -55,7 +55,7 @@
 		script.onerror = script.onload;
 		script.onload = function () {
 			if (--counter > 0) return;
-			$.nav.load("menu");
+			$.nav.load("Sign In");
 		};
 		document.head.appendChild(script);
 		
