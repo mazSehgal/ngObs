@@ -8,6 +8,6 @@
 		script.src = "https://nigelgoss.github.io/$/" + $v;
 		document.head.appendChild(script);
 		
-	}):
+	});
 	
 }());
