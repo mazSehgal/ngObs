@@ -7,7 +7,7 @@
 	].forEach(function ($v) {
 	
 		var script = document.createElement("script");
-		script.src = "https://nigelgoss.github.io/$/" + $v;
+		script.src = $.const.root + "$/" + $v;
 		document.head.appendChild(script);
 		
 	});
