@@ -28,7 +28,6 @@ main.appendChild(buttonSignIn);
 buttonSignIn.textContent = "Sign In";
 buttonSignIn.onpointerdown = function () {
 	$.db.query(["signIn", {}], function ($d) {
-		console.log($d);
 		$.nav.load("Menu");
 	});
 };
