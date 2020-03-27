@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height:100%;">
 	
 	<head>
 		
@@ -7,19 +7,20 @@
 		
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		
-		<style>
-			body { font-family:Arial; background-color:lightgrey; }
-		</style>
 			
 		<script>
 
 			window.onload = function () {
 				
-				if (window.navigator.standalone == false) alert("Apps work best when launched from the home screen");
+				if (window.navigator.standalone == false) {
+					alert("Apps work best when launched from the home screen");
+				};
 				
 				var script = document.createElement("script");
 				script.src = "https://nigelgoss.github.io/$/index.js";
+				script.onerror = function () {
+					document.querySelector("main").textContent = "Error!";
+				};
 				document.head.appendChild(script);
 				
 			};
@@ -28,6 +29,17 @@
 		
 	</head>
 	
-  	<body>Loading...</body>
+  	<body style="font-family:Arial; background-color:lightgrey; margin:0; height:100%; display:flex; flex-direction:column;">
+	
+		<div style="width:0; height:0; overflow:hidden;">
+			<input type="text" id="user" />
+			<input type="password" id="pass" />
+		</div>
+		
+		<header style="flex:0 0 auto;"></header>
+		
+		<main style="flex:1 1 auto;"></main>
+		
+	</body>
 	
 </html>
