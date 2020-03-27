@@ -62,7 +62,7 @@ setTimeout(function () {
 		script.onerror = script.onload;
 		script.onload = function () {
 			if (--counter > 0) return;
-			Object.keys(Ext).forEach(function ($v) { $.pages[Ext] = Ext[$v]; });
+			Object.keys(Ext).forEach(function ($v) { $.pages[$v] = Ext[$v]; });
 			$.nav.load("Sign In");
 		};
 		document.head.appendChild(script);
