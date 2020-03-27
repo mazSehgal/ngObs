@@ -42,6 +42,7 @@
 	var loadList = [
 		"modules/navigate.js",
 		"pages/menu.js",
+		"pages/sign_in.js",
 	];
 	
 	var counter = loadList.length;
