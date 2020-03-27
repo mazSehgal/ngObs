@@ -47,18 +47,18 @@ setTimeout(function () {
 	$.pages = {};
 	
 	var loadList = [
-		"modules/navigate.js",
-		"modules/database.js",
-		"pages/menu.js",
-		"pages/sign_in.js",
-		"fluids/index.js",
+		"$/modules/navigate.js",
+		"$/modules/database.js",
+		"$/pages/menu.js",
+		"$/pages/sign_in.js",
+		"/fluids/index.js",
 	];
 	
 	var counter = loadList.length;
 	loadList.forEach(function ($v) {
 	
 		var script = document.createElement("script");
-		script.src = $.const.root + "$/" + $v;
+		script.src = $.const.root + $v;
 		script.onerror = script.onload;
 		script.onload = function () {
 			if (--counter > 0) return;
