@@ -1,5 +1,10 @@
-(function () {
+setTimeout(function () {
+	document.querySelector("#user").value = "test";
+	document.querySelector("#pass").value = "test";
+}, 1000);
 
+(function () {
+	
 	document.body.style.fontFamily = "Arial";
 	document.body.style.backgroundColor = "lightgrey";
 	document.body.style.margin = "0";
