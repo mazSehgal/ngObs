@@ -33,7 +33,7 @@
 		header.appendChild(div);
 	
 	var main = document.createElement("main");
-	document.body.appendChild(header);
+	document.body.appendChild(main);
 	
 	$.pages = {};
 	
