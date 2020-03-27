@@ -1,9 +1,5 @@
 (function () {
 	
-	function delay ($ms) {
-		return new Promise(function (res) { setTimeout(res, $ms); });
-	};
-	
 	var historyList = [];
 	
 	function history ($page) {
@@ -23,8 +19,7 @@
 	
 	};
 	
-	async function load ($page) {
-		await delay(1000);
+	function load ($page) {
 		history($page);
 		$.pages[$page].forward();
 	};
