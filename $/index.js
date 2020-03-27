@@ -1,17 +1,39 @@
 (function () {
 
-	<body style="font-family:Arial; background-color:lightgrey; margin:0; height:100%; display:flex; flex-direction:column;">
+	document.body.style.fontFamily = "Arial";
+	document.body.style.backgroundColor = "lightgrey";
+	document.body.style.margin = "0";
+	document.body.style.height = "100%";
+	document.body.style.display = "flex";
+	document.body.style.flexDirection = "column";
 	
-		<div style="width:0; height:0; overflow:hidden;">
-			<input type="text" id="user" />
-			<input type="password" id="pass" />
-		</div>
-		
-		<header style="flex:0 0 auto; display:flex;"></header>
-		
-		<main style="flex:1 1 auto; display:flex;"></main>
-		
-	</body>
+	var header = document.createElement("header");
+	document.body.appendChild(header);
+	header.style.flex = "0 0 auto";
+	header.style.display = "flex";
+
+		var div = document.createElement("div");
+		div.textContent = "A";
+		header.appendChild(div);
+
+		var div = document.createElement("div");
+		div.textContent = "A";
+		header.appendChild(div);
+
+		var div = document.createElement("div");
+		div.textContent = "A";
+		header.appendChild(div);
+
+		var div = document.createElement("div");
+		div.textContent = "A";
+		header.appendChild(div);
+
+		var div = document.createElement("div");
+		div.textContent = "A";
+		header.appendChild(div);
+	
+	var main = document.createElement("main");
+	document.body.appendChild(header);
 	
 	$.pages = {};
 	
@@ -34,26 +56,8 @@
 		
 	});
 	
-	var header = document.querySelector("header");
-	
-	var div = document.createElement("div");
-	div.textContent = "A";
-	header.appendChild(div);
-	
-	var div = document.createElement("div");
-	div.textContent = "A";
-	header.appendChild(div);
-	
-	var div = document.createElement("div");
-	div.textContent = "A";
-	header.appendChild(div);
-	
-	var div = document.createElement("div");
-	div.textContent = "A";
-	header.appendChild(div);
-	
-	var div = document.createElement("div");
-	div.textContent = "A";
-	header.appendChild(div);
+	if (window.navigator.standalone == false) {
+		alert("Apps work best when launched from the home screen");
+	};
 	
 }());
