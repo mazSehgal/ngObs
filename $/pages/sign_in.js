@@ -43,8 +43,8 @@
 		var pass = sso.querySelector("#pass").value;
 		if (user !== "" && pass !== "") {
 			username.value = user;
-      password.value = pass;
-      buttonSignIn.onpointerdown();
+			password.value = pass;
+			buttonSignIn.onpointerdown();
 		};
 		
 		if (--counter === 0) {
@@ -52,9 +52,10 @@
 		} else {
 			setTimeout(ssoTry, 200);
 		};
+		
 	};
 
-  ssoTry();
+	ssoTry();
   
   // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
