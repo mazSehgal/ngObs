@@ -16,8 +16,10 @@
 		header.appendChild(button);
 		button.id = "buttonBack";
 		button.textContent = "<";
-		button.onpointerdown = $.nav.back;
-		
+		button.onpointerdown = function () {
+			$.nav.back();
+		};
+	
 		var div = document.createElement("div");
 		div.textContent = "A";
 		header.appendChild(div);
