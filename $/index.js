@@ -13,9 +13,10 @@
 	header.style.display = "flex";
 
 		var button = document.createElement("button");
-		button.textContent = "<";
 		header.appendChild(button);
-
+		button.id = "buttonBack";
+		button.textContent = "<";
+		
 		var div = document.createElement("div");
 		div.textContent = "A";
 		header.appendChild(div);
