@@ -4,11 +4,13 @@
 	
 	function history ($page) {
 		
+		var rtn = null;
+		
 		if ($page !== undefined) {
 			historyList.push($page);
 		} else if (historyList.length > 2) {
 			historyList.pop();
-			var rtn = historyList.slice(-1)[0];
+			rtn = historyList.slice(-1)[0];
 		};
 		
 		document.querySelector("#buttonBack").style.visibility = (historyList.length > 2) ? "visible" : "hidden";
@@ -23,7 +25,8 @@
 	};
 	
 	function back () {
-		if (var page = history() === undefined) return;
+		var page = history();
+		if (page === null) return;
 		$.pages[page].back();
 	};
 	
