@@ -14,7 +14,7 @@ $.db = (function () {
 			if (xhr.status !== 200) return;
 			$ftn(xhr.responseText);
 		};
-		xhr.open("GET", $.const.root + "!/" + $in[0] + ".txt", true);
+		xhr.open("GET", $.const.root + "!/" + $in[0] + ".dat", true);
 		xhr.send();
 		
 	};
