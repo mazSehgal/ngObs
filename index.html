@@ -12,7 +12,11 @@
 			
 			(function () {
 
-				window.$ = {};
+				window.$ = {
+					"const": {
+						"root": "https://nigelgoss.github.io/",
+					},
+				};
 
 				window.onload = function () {
 
@@ -21,7 +25,7 @@
 					};
 
 					var script = document.createElement("script");
-					script.src = "https://nigelgoss.github.io/$/index.js";
+					script.src = $.const.root + "$/index.js";
 					script.onerror = function () {
 						document.querySelector("main").textContent = "Error!";
 					};
