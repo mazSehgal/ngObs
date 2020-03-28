@@ -13,6 +13,12 @@ function back () {
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
+var link = document.createElement("link");
+document.head.appendChild(link);
+link.rel = "preload";
+link.as = "image";
+link.href = $.const.root + "$/resources/splash.png";
+
 var main = document.createElement("main");
 main.style.flex = "1 1 auto";
 main.style.backgroundImage = "url('" + $.const.root + "$/resources/splash.png')";
