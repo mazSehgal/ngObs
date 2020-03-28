@@ -78,7 +78,19 @@ buttonSignIn.onpointerdown = function () {
 
 var div = document.createElement("div");
 main.appendChild(div);
-div.textContent = "Ts & Cs";
+div.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+div.style.borderRadius = "10px";
+div.style.padding = "10px";
+div.style.textAlign = "center";
+div.style.width = "80%";
+
+var p = document.createElement("p");
+div.appendChild(p);
+p.textContent = "Attention";
+
+var p = document.createElement("p");
+div.appendChild(p);
+p.textContent = "Something or other goes here...";
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
