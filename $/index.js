@@ -93,13 +93,13 @@ setTimeout(function () {
 	loadList.forEach(function ($v) {
 	
 		var script = document.createElement("script");
+		document.head.appendChild(script);
 		script.src = $.const.root + $v;
 		script.onerror = script.onload;
 		script.onload = function () {
 			if (--counter > 0) return;
 			$.nav.load("Sign In");
 		};
-		document.head.appendChild(script);
 		
 	});
 	
