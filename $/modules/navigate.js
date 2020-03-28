@@ -14,7 +14,7 @@
 		};
 		
 		document.querySelector("#buttonBack").style.visibility = (historyList.length > 2) ? "visible" : "hidden";
-		document.querySelector("#buttonSignOut").style.visibility = (historyList.length > 1) ? "visible" : "hidden";
+		document.querySelector("#buttonMenu").style.visibility = (historyList.length > 2) ? "visible" : "hidden";
 	
 		return rtn;
 	
