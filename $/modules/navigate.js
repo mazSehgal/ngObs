@@ -25,10 +25,11 @@
 		$.pages[$page].forward();
 	};
 	
-	function back () {
+	function back ($page) {
 		var page = history();
 		if (page === null) return;
 		$.pages[page].back();
+		if ($page !== undefined && historyList.slice(-1)[0] !== $page) back($page);
 	};
 	
 	$.nav = {
