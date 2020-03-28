@@ -30,6 +30,7 @@ table.appendChild(tr);
 
 var td = document.createElement("td");
 tr.appendChild(td);
+td.textContent = "Username";
 
 var td = document.createElement("td");
 tr.appendChild(td);
@@ -43,6 +44,7 @@ table.appendChild(tr);
 
 var td = document.createElement("td");
 tr.appendChild(td);
+td.textContent = "Password";
 
 var td = document.createElement("td");
 tr.appendChild(td);
@@ -63,6 +65,7 @@ tr.appendChild(td);
 var buttonSignIn = document.createElement("button");
 td.appendChild(buttonSignIn);
 buttonSignIn.textContent = "Sign In";
+buttonSignIn.style.width = "100%";
 buttonSignIn.onpointerdown = function () {
 	$.db.query(["signIn", {}], function ($d) {
 		$.nav.load("Menu");
