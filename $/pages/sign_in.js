@@ -19,8 +19,9 @@ main.style.backgroundImage = "url('" + $.const.root + "$/resources/splash.png')"
 main.style.backgroundPosition = "center center";
 main.style.backgroundSize = "cover";
 main.style.display = "flex";
+main.style.flexDirection = "column";
 main.style.alignItems = "center";
-main.style.justifyContent = "center";
+main.style.justifyContent = "space-evenly";
 
 var table = document.createElement("table");
 main.appendChild(table);
@@ -74,6 +75,10 @@ buttonSignIn.onpointerdown = function () {
 		$.nav.load("Menu");
 	});
 };
+
+var div = document.createElement("div");
+main.appendChild(div);
+div.textContent = "Ts & Cs";
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
