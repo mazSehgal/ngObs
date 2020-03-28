@@ -1,18 +1,12 @@
 $.pages["Fluids"] = (function () {
 
-  function forward () {
-  
+  Ext["Fluids"].save = function () {
+    alert(JOSN.stringify(store));
   };
-
-  function back () {
-  
-  };
-
-  var main = Ext["Fluids"];
   
   return {
-    "forward": forward,
-    "back": back,
+    "forward": Ext["Fluids"].forward,
+    "back": Ext["Fluids"].back,
   };
   
 }());
