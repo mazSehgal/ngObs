@@ -18,6 +18,9 @@ main.style.flex = "1 1 auto";
 main.style.backgroundImage = "url('" + $.const.root + "$/resources/splash.png')";
 main.style.backgroundPosition = "center";
 main.style.backgroundSize = "cover";
+main.style.display = "flex";
+main.style.alignItems = "center";
+main.style.justifyContent = "center";
 
 var username = document.createElement("input");
 main.appendChild(username);
