@@ -25,7 +25,7 @@ setTimeout(function () {
 	var header = document.createElement("header");
 	document.body.appendChild(header);
 	header.style.flex = "0 0 auto";
-	header.style.color = "darkgrey";
+	header.style.backgroundColor = "darkgrey";
 	header.style.display = "flex";
 
 		var button = document.createElement("button");
