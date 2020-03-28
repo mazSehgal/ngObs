@@ -1,7 +1,7 @@
 $.pages["Fluids"] = (function () {
 
   Ext["Fluids"].save = function () {
-    alert(JOSN.stringify(store));
+    alert(JSON.stringify(store));
   };
   
   return {
