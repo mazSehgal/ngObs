@@ -1,6 +1,6 @@
 setTimeout(function () {
 	document.querySelector("#user").value = "test";
-	document.querySelector("#pass").value = "test";
+	//document.querySelector("#pass").value = "test";
 }, 1000);
 
 (function () {
