@@ -33,13 +33,21 @@ setTimeout(function () {
 		div.textContent = "A";
 		header.appendChild(div);
 
-		var div = document.createElement("div");
-		div.textContent = "A";
-		header.appendChild(div);
-
-		var div = document.createElement("div");
-		div.textContent = "A";
-		header.appendChild(div);
+		onbeforeunload = function () { return "Are you sure?"; };
+		var button = document.createElement("button");
+		header.appendChild(button);
+		button.textContent = "Sign Out";
+		button.onpointerdown = function () {
+			onbeforeunload = null;
+			location.reload(true);
+		};
+	
+		var button = document.createElement("button");
+		header.appendChild(button);
+		button.textContent = "?";
+		button.onpointerdown = function () {
+			alert("Help");
+		};
 	
 	var main = document.createElement("main");
 	document.body.appendChild(main);
