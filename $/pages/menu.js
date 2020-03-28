@@ -16,6 +16,8 @@ $.pages["Menu"] = (function () {
 	var div = document.createElement("div");
 	main.appendChild(div);
 	div.style.flex = "1 1 auto";
+	div.style.display = "flex";
+	div.style.flexDirection = "column";
 	
 	[
 		["Fluids", "Fluid Balance Chart"],
@@ -23,8 +25,6 @@ $.pages["Menu"] = (function () {
 
 		var button = document.createElement("button");
 		button.textContent = $v[1];
-		button.style.flex = "1 0 50px";
-		button.style.padding = "10px";
 		button.onpointerdown = function () {
 			$.nav.load($v[0]);
 		};
