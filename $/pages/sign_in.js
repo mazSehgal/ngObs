@@ -24,6 +24,9 @@ main.style.justifyContent = "center";
 
 var table = document.createElement("table");
 main.appendChild(table);
+table.style.backgroundColor = "white";
+table.style.borderRadius = "10px";
+table.style.padding = "10px";
 
 var tr = document.createElement("tr");
 table.appendChild(tr);
