@@ -21,6 +21,7 @@ setTimeout(function () {
 		header.appendChild(button);
 		button.id = "buttonBack";
 		button.textContent = "<";
+		button.style.visibility = "hidden";
 		button.onpointerdown = function () {
 			$.nav.back();
 		};
@@ -37,6 +38,7 @@ setTimeout(function () {
 		var button = document.createElement("button");
 		header.appendChild(button);
 		button.id = "buttonSignOut";
+		button.style.visibility = "hidden";
 		button.textContent = "Sign Out";
 		button.onpointerdown = function () {
 			onbeforeunload = null;
