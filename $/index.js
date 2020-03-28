@@ -87,6 +87,10 @@ setTimeout(function () {
 		"$/pages/menu.js",
 		"$/pages/sign_in.js",
 		"$/pages/fluids.js",
+		"$/pages/patient.js",
+		"$/pages/locations.js",
+		"$/pages/search.js",
+		"$/pages/search_results.js",
 	];
 	
 	var counter = loadList.length;
