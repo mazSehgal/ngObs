@@ -88,6 +88,7 @@ setTimeout(function () {
 		"$/pages/sign_in.js",
 		"$/pages/fluids.js",
 		"$/pages/patient.js",
+		"$/pages/patient_list.js",
 		"$/pages/locations.js",
 		"$/pages/search.js",
 		"$/pages/search_results.js",
