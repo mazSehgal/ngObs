@@ -14,6 +14,7 @@ function back () {
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
 var main = document.createElement("main");
+main.style.backgroundImage = "url('" + $.const.root + "$/resources/splash.png')";
 
 var username = document.createElement("input");
 main.appendChild(username);
