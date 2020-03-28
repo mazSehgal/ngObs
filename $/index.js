@@ -92,6 +92,7 @@ setTimeout(function () {
 		"$/pages/locations.js",
 		"$/pages/search.js",
 		"$/pages/search_results.js",
+		"$/pages/admin.js",
 	];
 	
 	var counter = loadList.length;
