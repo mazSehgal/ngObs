@@ -86,6 +86,8 @@ div.style.width = "80%";
 
 var p = document.createElement("p");
 div.appendChild(p);
+p.style.fontWeight = "bold";
+p.style.fontVariant = "small-caps";
 p.textContent = "Attention";
 
 var p = document.createElement("p");
