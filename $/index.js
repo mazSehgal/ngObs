@@ -36,6 +36,7 @@ setTimeout(function () {
 		onbeforeunload = function () { return "Are you sure?"; };
 		var button = document.createElement("button");
 		header.appendChild(button);
+		button.id = "buttonSignOut";
 		button.textContent = "Sign Out";
 		button.onpointerdown = function () {
 			onbeforeunload = null;
