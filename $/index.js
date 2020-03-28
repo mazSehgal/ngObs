@@ -5,6 +5,10 @@ setTimeout(function () {
 
 (function () {
 	
+	onbeforeunload = function () {
+		return "Are you sure?";
+	};
+	
 	var link = document.createElement("link");
 	document.head.appendChild(link);
 	link.rel = "stylesheet";
@@ -39,23 +43,21 @@ setTimeout(function () {
 		var div = document.createElement("div");
 		div.textContent = "A";
 		header.appendChild(div);
-
-		onbeforeunload = function () { return "Are you sure?"; };
-		var button = document.createElement("button");
-		header.appendChild(button);
-		button.id = "buttonSignOut";
-		button.style.visibility = "hidden";
-		button.textContent = "Sign Out";
-		button.onpointerdown = function () {
-			onbeforeunload = null;
-			location.reload(true);
-		};
 	
 		var button = document.createElement("button");
 		header.appendChild(button);
 		button.textContent = "?";
 		button.onpointerdown = function () {
 			alert("Help");
+		};
+	
+		var button = document.createElement("button");
+		header.appendChild(button);
+		button.id = "buttonMenu";
+		button.style.visibility = "hidden";
+		button.textContent = "Menu";
+		button.onpointerdown = function () {
+			
 		};
 	
 	var main = document.createElement("main");
