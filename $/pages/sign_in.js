@@ -16,22 +16,52 @@ function back () {
 var main = document.createElement("main");
 main.style.flex = "1 1 auto";
 main.style.backgroundImage = "url('" + $.const.root + "$/resources/splash.png')";
-main.style.backgroundPosition = "center";
+main.style.backgroundPosition = "center center";
 main.style.backgroundSize = "cover";
 main.style.display = "flex";
 main.style.alignItems = "center";
 main.style.justifyContent = "center";
 
+var table = document.createElement("table");
+main.appendChild(table);
+
+var tr = document.createElement("tr");
+table.appendChild(tr);
+
+var td = document.createElement("td");
+tr.appendChild(td);
+
+var td = document.createElement("td");
+tr.appendChild(td);
+
 var username = document.createElement("input");
-main.appendChild(username);
+td.appendChild(username);
 username.type = "text";
 
+var tr = document.createElement("tr");
+table.appendChild(tr);
+
+var td = document.createElement("td");
+tr.appendChild(td);
+
+var td = document.createElement("td");
+tr.appendChild(td);
+
 var password = document.createElement("input");
-main.appendChild(password);
+td.appendChild(password);
 password.type = "password";
 
+var tr = document.createElement("tr");
+table.appendChild(tr);
+
+var td = document.createElement("td");
+tr.appendChild(td);
+
+var td = document.createElement("td");
+tr.appendChild(td);
+
 var buttonSignIn = document.createElement("button");
-main.appendChild(buttonSignIn);
+td.appendChild(buttonSignIn);
 buttonSignIn.textContent = "Sign In";
 buttonSignIn.onpointerdown = function () {
 	$.db.query(["signIn", {}], function ($d) {
