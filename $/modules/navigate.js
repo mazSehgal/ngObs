@@ -13,6 +13,8 @@
 			rtn = historyList.slice(-1)[0];
 		};
 		
+		document.querySelector("#pageTitle").textContent = "ngObs :: " + rtn;
+		
 		document.querySelector("#buttonBack").disabled = (historyList.length > 2) ? false : true;
 		document.querySelector("#buttonMenu").disabled = (historyList.length > 2) ? false : true;
 	
@@ -22,7 +24,6 @@
 	
 	function load ($page) {
 		history($page);
-		document.querySelector("#pageTitle").textContent = "ngObs :: " + $page;
 		$.pages[$page].forward();
 	};
 	
