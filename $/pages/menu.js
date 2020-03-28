@@ -28,6 +28,14 @@ $.pages["Menu"] = (function () {
 		
 	});
 	
+	var button = document.createElement("button");
+	main.appendChild(button);
+	button.textContent = "Sign Out";
+	button.onpointerdown = function () {
+		onbeforeunload = null;
+		location.reload(true);
+	};
+	
 	return {
 		"forward": forward,
 		"back": back,
