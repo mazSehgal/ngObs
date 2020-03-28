@@ -41,7 +41,13 @@ setTimeout(function () {
 		var div = document.createElement("div");
 		header.appendChild(div);
 		div.style.flex = "1 1 auto";
-		div.textContent = "ngObs";
+		div.style.display = "flex";
+
+			var span = document.createElement("span");
+			div.appendChild(span);
+			span.style.alignItems = "center";
+			span.style.justifyContent = "center";
+			span.textContent = "ngObs";
 		
 		var button = document.createElement("button");
 		header.appendChild(button);
