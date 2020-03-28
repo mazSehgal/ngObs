@@ -49,8 +49,8 @@ setTimeout(function () {
 
 			var span = document.createElement("span");
 			div.appendChild(span);
-			span.textContent = "ngObs";
-		
+			span.id = "pageTitle";
+			
 		var button = document.createElement("button");
 		header.appendChild(button);
 		button.textContent = "?";
