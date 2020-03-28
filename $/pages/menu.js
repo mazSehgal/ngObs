@@ -20,7 +20,10 @@ $.pages["Menu"] = (function () {
 	div.style.flexDirection = "column";
 	
 	[
-		["Fluids", "Fluid Balance Chart"],
+		["Patient List", "ALD"],
+		["Locations", "Locations"],
+		["Search", "Search"],
+		["Admin", "Admin"],
 	].forEach(function ($v) {
 
 		var button = document.createElement("button");
