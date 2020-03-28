@@ -14,7 +14,10 @@ function back () {
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
 var main = document.createElement("main");
+main.style.flex = "1 1 auto";
 main.style.backgroundImage = "url('" + $.const.root + "$/resources/splash.png')";
+main.style.backgroundPosition = "center";
+main.style.backgroundSize = "cover";
 
 var username = document.createElement("input");
 main.appendChild(username);
