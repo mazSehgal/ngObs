@@ -42,11 +42,11 @@ setTimeout(function () {
 		header.appendChild(div);
 		div.style.flex = "1 1 auto";
 		div.style.display = "flex";
+		div.style.alignItems = "center";
+		div.style.justifyContent = "center";
 
 			var span = document.createElement("span");
 			div.appendChild(span);
-			span.style.alignItems = "center";
-			span.style.justifyContent = "center";
 			span.textContent = "ngObs";
 		
 		var button = document.createElement("button");
