@@ -36,6 +36,7 @@ $.pages["Menu"] = (function () {
 	main.appendChild(div);
 	div.style.flex = "0 0 auto";
 	div.style.display = "flex";
+	div.style.flexDirection = "column";
 	
 	var button = document.createElement("button");
 	div.appendChild(button);
