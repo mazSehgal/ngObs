@@ -13,8 +13,8 @@
 			rtn = historyList.slice(-1)[0];
 		};
 		
-		document.querySelector("#buttonBack").style.visibility = (historyList.length > 2) ? "visible" : "hidden";
-		document.querySelector("#buttonMenu").style.visibility = (historyList.length > 2) ? "visible" : "hidden";
+		document.querySelector("#buttonBack").disabled = (historyList.length > 2) ? false : true;
+		document.querySelector("#buttonMenu").disabled = (historyList.length > 2) ? false : true;
 	
 		return rtn;
 	
