@@ -22,6 +22,7 @@
 	
 	function load ($page) {
 		history($page);
+		document.querySelector("#pageTitle").textContent = "ngObs :: " + $page;
 		$.pages[$page].forward();
 	};
 	
