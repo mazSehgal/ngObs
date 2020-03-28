@@ -51,7 +51,7 @@ setTimeout(function () {
 		"$/modules/database.js",
 		"$/pages/menu.js",
 		"$/pages/sign_in.js",
-		"$/pages/fluids.js", "/fluids/index.js",
+		"$/pages/fluids.js",
 	];
 	
 	var counter = loadList.length;
