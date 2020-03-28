@@ -1,5 +1,2 @@
-button {
-    min-width: 40px;
-    min-height: 40px;
-    border-radius: 5px;
-}
+button { min-width:40px; min-height:40px; border-radius:5px; }
+button[disabled] { color:lightgrey; }
