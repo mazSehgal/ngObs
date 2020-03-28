@@ -32,8 +32,9 @@ setTimeout(function () {
 		button.id = "buttonBack";
 		button.textContent = "<";
 		button.style.flex = "0 0 auto";
-		button.style.visibility = "hidden";
+		button.disabled = true;
 		button.onpointerdown = function () {
+			if (this.disabled === true) return;
 			$.nav.back();
 		};
 	
@@ -54,9 +55,10 @@ setTimeout(function () {
 		header.appendChild(button);
 		button.id = "buttonMenu";
 		button.style.flex = "0 0 auto";
-		button.style.visibility = "hidden";
+		button.disabled = true;
 		button.textContent = "=";
 		button.onpointerdown = function () {
+			if (this.disabled === true) return;
 			$.nav.back("Menu");
 		};
 	
