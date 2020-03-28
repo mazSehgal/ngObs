@@ -1,4 +1,4 @@
-$.pages["Search"] = (function () {
+$.pages["Locations"] = (function () {
 
   function forward () {
 		back();
@@ -9,7 +9,7 @@ $.pages["Search"] = (function () {
 	};
 	
 	var main = document.createElement("main");
-	main.textContent = "Search...";
+	main.textContent = "Locations...";
   
   
 	return {
