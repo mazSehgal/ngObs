@@ -31,22 +31,21 @@ setTimeout(function () {
 		header.appendChild(button);
 		button.id = "buttonBack";
 		button.textContent = "<";
+		button.style.flex = "0 0 auto";
 		button.style.visibility = "hidden";
 		button.onpointerdown = function () {
 			$.nav.back();
 		};
 	
 		var div = document.createElement("div");
-		div.textContent = "A";
 		header.appendChild(div);
-
-		var div = document.createElement("div");
-		div.textContent = "A";
-		header.appendChild(div);
-	
+		div.style.flex = "1 1 auto";
+		div.textContent = "ngObs";
+		
 		var button = document.createElement("button");
 		header.appendChild(button);
 		button.textContent = "?";
+		button.style.flex = "0 0 auto";
 		button.onpointerdown = function () {
 			alert("Help");
 		};
@@ -54,8 +53,9 @@ setTimeout(function () {
 		var button = document.createElement("button");
 		header.appendChild(button);
 		button.id = "buttonMenu";
+		button.style.flex = "0 0 auto";
 		button.style.visibility = "hidden";
-		button.textContent = "Menu";
+		button.textContent = "=";
 		button.onpointerdown = function () {
 			
 		};
