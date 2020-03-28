@@ -57,7 +57,7 @@ setTimeout(function () {
 		button.style.visibility = "hidden";
 		button.textContent = "=";
 		button.onpointerdown = function () {
-			
+			$.nav.back("Menu");
 		};
 	
 	var main = document.createElement("main");
