@@ -5,6 +5,12 @@ setTimeout(function () {
 
 (function () {
 	
+	var link = document.createElement("link");
+	document.head.appendChild(link);
+	link.rel = "stylesheet";
+	link.type = "text/css";
+	link.href = $.const.root + "$/resources/main.css";   
+	
 	document.body.style.fontFamily = "Arial";
 	document.body.style.backgroundColor = "lightgrey";
 	document.body.style.margin = "0";
