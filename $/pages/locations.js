@@ -33,12 +33,22 @@ function init () {
 		{"Code": "4", "Desc": "Ward 4"},
 	];
 	datagrid.ftn = function ($v) {
-		var button = document.createElement("button");
-		button.textContent = $v.Desc;
-		button.onpointerdown = function () {
-			$.nav.load("Patient List", {"Location": $v.Code});
-		};
-		return button;
+		
+		var ele = document.createElement("div");
+		
+			var div = document.createElement("div");
+			ele.appendChild(div);
+			div.textContent = $v.Desc;
+		
+			var button = document.createElement("button");
+			ele.appendChild(button);
+			button.textContent = ">";
+			button.onpointerdown = function () {
+				$.nav.load("Patient List", {"Location": $v.Code});
+			};
+		
+		return ele;
+		
 	};
   
 	return {
