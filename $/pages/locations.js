@@ -1,18 +1,26 @@
-$.pages["Locations"] = (async function () {
+$.pages["Locations"] = (function () {
 
-while (typeof $.datagrid === "undefined") {
-	await new Promise(function (res) { setTimeout(res, 100); });
+(new Promise(function ($r) {
+	setInterval(function () {
+	if ($ === undefined) return;
+	$r();
+}, 200); })).then(function () {
+	return init();
+});
+
+function forward () {
+	back();
 };
+
+function back () {
+	document.querySelector("main").replaceWith(main);
+};
+
+var main;
 	
-  function forward () {
-		back();
-	};
+function init () {	
 	
-	function back () {
-		document.querySelector("main").replaceWith(main);
-	};
-	
-	var main = document.createElement("main");
+	main = document.createElement("main");
 	
 	var datagrid = $.datagrid();
 	main.appendChild(datagrid);
@@ -35,5 +43,7 @@ while (typeof $.datagrid === "undefined") {
 		"forward": forward,
 		"back": back,
 	};
+	
+};
   
 }());
