@@ -31,6 +31,18 @@ function init () {
 		{"Code": "2", "Desc": "Ward 2"},
 		{"Code": "3", "Desc": "Ward 3"},
 		{"Code": "4", "Desc": "Ward 4"},
+		{"Code": "1", "Desc": "Ward 1"},
+		{"Code": "2", "Desc": "Ward 2"},
+		{"Code": "3", "Desc": "Ward 3"},
+		{"Code": "4", "Desc": "Ward 4"},
+		{"Code": "1", "Desc": "Ward 1"},
+		{"Code": "2", "Desc": "Ward 2"},
+		{"Code": "3", "Desc": "Ward 3"},
+		{"Code": "4", "Desc": "Ward 4"},
+		{"Code": "1", "Desc": "Ward 1"},
+		{"Code": "2", "Desc": "Ward 2"},
+		{"Code": "3", "Desc": "Ward 3"},
+		{"Code": "4", "Desc": "Ward 4"},
 	];
 	datagrid.ftn = function ($v) {
 		
