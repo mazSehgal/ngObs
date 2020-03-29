@@ -24,7 +24,7 @@ function init () {
 	main.appendChild(datagrid);
 	datagrid.style.flex = "1 1 auto";
 	datagrid.style.display = "grid";
-	datagrid.style.gridTemplateColumns = "repeat(auto-fit, minmax(400px, 1fr))";
+	datagrid.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 1fr))";
 	
 	datagrid.data = [
 		{"Code": "1", "Desc": "Ward 1"},
