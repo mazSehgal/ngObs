@@ -10,22 +10,22 @@ $.pages["Locations"] = (function () {
 	
 	var main = document.createElement("main");
 	
-	[
-		["1", "Ward 1"],
-		["2", "Ward 2"],
-		["3", "Ward 3"],
-		["4", "Ward 4"],
-	].forEach(function ($v) {
-
+	var datagrid = $.datagrid();
+	main.appenedChild(datagrid);
+	datagrid.data = [
+		{"Code": "1", "Desc": "Ward 1"},
+		{"Code": "2", "Desc": "Ward 2"},
+		{"Code": "3", "Desc": "Ward 3"},
+		{"Code": "4", "Desc": "Ward 4"},
+	];
+	datagrind.ftn = function ($v) {
 		var button = document.createElement("button");
 		main.appendChild(button);
-		button.textContent = $v[1];
+		button.textContent = $v.Desc;
 		button.onpointerdown = function () {
-			$.nav.load("Patient List", {"Location": $v[0]});
+			$.nav.load("Patient List", {"Location": $v.Code});
 		};
-
-	});
-  
+	};
   
 	return {
 		"forward": forward,
