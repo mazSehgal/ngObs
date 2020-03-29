@@ -23,7 +23,8 @@ function init () {
 	var datagrid = $.datagrid();
 	main.appendChild(datagrid);
 	datagrid.style.flex = "1 1 auto";
-	datagrid.style.display = "flex";
+	datagrid.style.display = "grid";
+	datagrid.style.gridTemplateColumns = "1fr 1fr";
 	
 	datagrid.data = [
 		{"Code": "1", "Desc": "Ward 1"},
