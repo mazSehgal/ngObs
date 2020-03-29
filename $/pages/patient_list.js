@@ -9,8 +9,22 @@ $.pages["Patient List"] = (function () {
 	};
 	
 	var main = document.createElement("main");
-	main.textContent = "Patient list...";
-  
+	
+	[
+		["1", "Patient 1"],
+		["2", "Patient 2"],
+		["3", "Patient 3"],
+		["4", "Patient 4"],
+	].forEach(function ($v) {
+
+		var button = document.createElement("button");
+		main.appendChild(button);
+		button.textContent = $v[1];
+		button.onpointerdown = function () {
+			$.nav.load("Patient", {"Patient": $v[0]});
+		};
+
+	});
   
 	return {
 		"forward": forward,
