@@ -1,12 +1,14 @@
 $.pages["Locations"] = (function () {
 
 (new Promise(function ($r) {
-	setInterval(function () {
+	var interval = setInterval(function () {
 		console.log("Now?");
 		if ($.datagrid === undefined) return;
+		clearInterval(interval);
 		$r();
 	}, 200);
 })).then(function () {
+	console.log("Resolved");
 	return init();
 });
 
