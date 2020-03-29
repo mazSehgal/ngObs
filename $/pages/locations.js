@@ -19,10 +19,10 @@ function init () {
 	var main = document.createElement("main");
 	main.style.flex = "1 1 auto";
 	main.style.display = "flex";
+	main.style.flexDirection = "column";
 	
 	var datagrid = $.datagrid();
 	main.appendChild(datagrid);
-	datagrid.style.flex = "1 1 auto";
 	datagrid.style.display = "grid";
 	datagrid.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 1fr))";
 	
