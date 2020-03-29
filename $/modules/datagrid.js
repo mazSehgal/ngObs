@@ -19,7 +19,7 @@ Object.defineProperties(section, {
 		set: function ($in) {	store.data = $in; build(); }
 	},
 
-};
+});
 
 function build () {
 
