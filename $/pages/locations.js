@@ -2,9 +2,11 @@ $.pages["Locations"] = (function () {
 
 (new Promise(function ($r) {
 	setInterval(function () {
-	if ($ === undefined) return;
-	$r();
-}, 200); })).then(function () {
+		console.log("Now?");
+		if ($ === undefined) return;
+		$r();
+	}, 200);
+})).then(function () {
 	return init();
 });
 
