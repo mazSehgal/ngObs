@@ -1,12 +1,9 @@
 (function () {
 
-var pageName = "Locations";
-	
 var interval = setInterval(function () {
-	console.log(pageName);
 	if ($.datagrid === undefined) return;
 	clearInterval(interval);
-	$.pages[pageName] =  init();
+	$.pages["Locations"] =  init();
 }, 200);
 	
 function init () {	
