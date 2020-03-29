@@ -20,7 +20,7 @@ while (typeof $.datagrid === "undefined") await new Promise(function (res) { set
 		{"Code": "3", "Desc": "Ward 3"},
 		{"Code": "4", "Desc": "Ward 4"},
 	];
-	datagrind.ftn = function ($v) {
+	datagrid.ftn = function ($v) {
 		var button = document.createElement("button");
 		main.appendChild(button);
 		button.textContent = $v.Desc;
