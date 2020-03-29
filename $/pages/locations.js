@@ -1,28 +1,24 @@
-$.pages["Locations"] = (function () {
+(function () {
 
-(new Promise(function ($r) {
-	var interval = setInterval(function () {
-		console.log("Now?");
-		if ($.datagrid === undefined) return;
-		clearInterval(interval);
-		$r();
-	}, 200);
-})).then(function () {
-	console.log("Resolved");
-	return init();
-});
-
-function forward () {
-	back();
-};
-
-function back () {
-	document.querySelector("main").replaceWith(main);
-};
-
-var main;
+var pageName = "Locations";
+	
+var interval = setInterval(function () {
+	if ($.datagrid === undefined) return;
+	clearInterval(interval);
+	$.pages[pageName] =  init();
+}, 200);
 	
 function init () {	
+
+	function forward () {
+		back();
+	};
+
+	function back () {
+		document.querySelector("main").replaceWith(main);
+	};
+
+	var main;
 	
 	main = document.createElement("main");
 	
