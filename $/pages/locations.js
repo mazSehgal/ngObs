@@ -1,6 +1,8 @@
 $.pages["Locations"] = (async function () {
 
-while (typeof $.datagrid === "undefined") await new Promise(function (res) { setTimeout(res, 100); });	
+while (typeof $.datagrid === "undefined") {
+	await new Promise(function (res) { setTimeout(res, 100); });
+};
 	
   function forward () {
 		back();
