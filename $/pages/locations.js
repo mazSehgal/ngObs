@@ -41,6 +41,8 @@ function init () {
 		ele.style.border = "1px solid grey";
 		ele.style.borderRadius = "10px";
 		ele.style.margin = "5px";
+		ele.style.padding = "5px";
+		ele.style.backgroundColor = "white";
 		
 			var div = document.createElement("div");
 			ele.appendChild(div);
