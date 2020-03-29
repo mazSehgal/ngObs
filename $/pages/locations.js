@@ -16,12 +16,15 @@ function init () {
 		document.querySelector("main").replaceWith(main);
 	};
 
-	var main;
-	
-	main = document.createElement("main");
+	var main = document.createElement("main");
+	main.style.flex = "1 1 auto";
+	main.style.display = "flex";
 	
 	var datagrid = $.datagrid();
 	main.appendChild(datagrid);
+	datagrid.style.flex = "1 1 auto";
+	datagrid.style.display = "flex";
+	
 	datagrid.data = [
 		{"Code": "1", "Desc": "Ward 1"},
 		{"Code": "2", "Desc": "Ward 2"},
