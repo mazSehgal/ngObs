@@ -30,11 +30,11 @@ function init () {
 	];
 	datagrid.ftn = function ($v) {
 		var button = document.createElement("button");
-		main.appendChild(button);
 		button.textContent = $v.Desc;
 		button.onpointerdown = function () {
 			$.nav.load("Patient List", {"Location": $v.Code});
 		};
+		return button;
 	};
   
 	return {
