@@ -13,7 +13,7 @@ $.datagrid = (function () {
 
 			"ftn": {
 				get: function () { return store.ftn; },
-				set: function ($in) { store.data = $in; build(); }
+				set: function ($in) { store.ftn = $in; build(); }
 			},
 
 			"data": {
