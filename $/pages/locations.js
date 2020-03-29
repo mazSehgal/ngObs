@@ -13,7 +13,7 @@ while (typeof $.datagrid === "undefined") await new Promise(function (res) { set
 	var main = document.createElement("main");
 	
 	var datagrid = $.datagrid();
-	main.appenedChild(datagrid);
+	main.appendChild(datagrid);
 	datagrid.data = [
 		{"Code": "1", "Desc": "Ward 1"},
 		{"Code": "2", "Desc": "Ward 2"},
