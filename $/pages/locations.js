@@ -35,15 +35,15 @@ function init () {
 	datagrid.ftn = function ($v) {
 		
 		var ele = document.createElement("div");
+		ele.style.display = "flex";
+		ele.style.justifyContent = "space-between";
+		ele.style.alignItems = "center";
+		ele.style.border = "1px solid grey";
+		ele.style.borderRadius = "10px";
+		ele.style.margin = "5px";
 		
 			var div = document.createElement("div");
 			ele.appendChild(div);
-			div.style.display = "flex";
-			div.style.justifyContent = "space-between";
-			div.style.alignItems = "center";
-			div.style.border = "1px solid grey";
-			div.style.borderRadius = "10px";
-			div.style.margin = "5px";
 			div.textContent = $v.Desc;
 		
 			var button = document.createElement("button");
