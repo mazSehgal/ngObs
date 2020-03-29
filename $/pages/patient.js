@@ -18,7 +18,7 @@ $.pages["Patient"] = (function () {
 		main.appendChild(button);
 		button.textContent = $v[1];
 		button.onpointerdown = function () {
-			$.nav.load($v[0], {"Patient": "1");
+			$.nav.load($v[0], {"Patient": "1"});
 		};
 
 	});
