@@ -3,7 +3,7 @@ $.pages["Locations"] = (function () {
 (new Promise(function ($r) {
 	setInterval(function () {
 		console.log("Now?");
-		if ($ === undefined) return;
+		if ($.datagrid === undefined) return;
 		$r();
 	}, 200);
 })).then(function () {
