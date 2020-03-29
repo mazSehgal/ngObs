@@ -20,6 +20,7 @@ function init () {
 	main.style.flex = "1 1 auto";
 	main.style.display = "flex";
 	main.style.flexDirection = "column";
+	main.style.overflow = "auto";
 	
 	var datagrid = $.datagrid();
 	main.appendChild(datagrid);
