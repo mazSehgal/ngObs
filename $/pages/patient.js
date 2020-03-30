@@ -60,7 +60,7 @@ function init () {
 			};
 		
 			var em = document.createElement("em");
-			ele.appendChild(strong);
+			ele.appendChild(em);
 			em.style.gridColumn = "span 2";
 			em.textContent = $v.Desc;
 
