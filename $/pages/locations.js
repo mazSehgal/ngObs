@@ -8,17 +8,18 @@ var interval = setInterval(function () {
 	
 function init () {	
 
-	function forward () {
+	function forward ($in, $cb) {
 		
 		$.db.query(["locations", {}], function ($d) {
 			datagrid.data = $d;
-			back();
+			back($cb);
 		});
 
 	};
 
-	function back () {
+	function back ($cb) {
 		document.querySelector("main").replaceWith(main);
+		$cb();
 	};
 
 	var main = document.createElement("main");
