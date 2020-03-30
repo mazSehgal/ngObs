@@ -52,6 +52,7 @@ function init () {
 		
 			var button = document.createElement("button");
 			ele.appendChild(button);
+			button.style.borderRadius = "999px";
 			button.style.gridRow = "span 2";
 			button.textContent = ">";
 			button.onpointerdown = function () {
