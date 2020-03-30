@@ -53,21 +53,31 @@ function init () {
 				div.appendChild(strong);
 				strong.textContent = $v.Desc;
 		
-				var span = document.createElement("span");
-				div.appendChild(span);
-				span.style.display = "flex";
-				span.style.color = "grey";
-				span.style.fontSize = "0.7em";
+				var div2 = document.createElement("div");
+				div.appendChild(div2);
+				div2.style.display = "flex";
+				div2.style.color = "grey";
+				div2.style.fontSize = "0.7em";
 		
-					var em = document.createElement("em");
-					span.appendChild(em);
-					em.style.flex = "1 1 50px";
-					em.textContent = "Code: " + $v.Code;
+					var span = document.createElement("span");
+					div2.appendChild(span);
+					span.style.flex = "1 1 50px";
+					
+						var em = document.createElement("em");
+						span.appendChild(em);
+						em.textContent = "Code";
+						
+						span.appendChild(document.createTextNode($v.Code));
 
-					var em = document.createElement("em");
-					span.appendChild(em);
-					em.style.flex = "1 1 50px";
-					em.textContent = "Site: " + $v.Site;
+					var span = document.createElement("span");
+					div2.appendChild(span);
+					span.style.flex = "1 1 50px";
+					
+						var em = document.createElement("em");
+						span.appendChild(em);
+						em.textContent = "Site";
+						
+						span.appendChild(document.createTextNode($v.Site));
 		
 			var button = document.createElement("button");
 			ele.appendChild(button);
