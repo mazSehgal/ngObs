@@ -30,6 +30,7 @@ function init () {
 	var datagrid = $.datagrid();
 	main.appendChild(datagrid);
 	datagrid.style.display = "grid";
+	datagrid.style.gridGap = "5px";
 	datagrid.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 1fr))";
 	
 	datagrid.ftn = function ($v) {
@@ -41,7 +42,7 @@ function init () {
 		ele.style.border = "1px solid grey";
 		ele.style.borderRadius = "10px";
 		ele.style.margin = "2px";
-		ele.style.padding = "5px";
+		ele.style.padding = "10px";
 		ele.style.backgroundColor = "white";
 		
 			var strong = document.createElement("strong");
@@ -80,7 +81,6 @@ function init () {
 				em.textContent = "Site ";
 						
 				div.appendChild(document.createTextNode($v.Site));
-		
 					
 		return ele;
 		
