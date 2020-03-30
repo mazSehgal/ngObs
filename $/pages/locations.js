@@ -62,12 +62,12 @@ function init () {
 		
 					var em = document.createElement("em");
 					span.appendChild(em);
-					em.style.flex = "1 1 auto";
+					em.style.flex = "1 1 50%";
 					em.textContent = "Code: " + $v.Code;
 
 					var em = document.createElement("em");
 					span.appendChild(em);
-					em.style.flex = "1 1 auto";
+					em.style.flex = "1 1 50%";
 					em.textContent = "Site: " + $v.Site;
 		
 			var button = document.createElement("button");
