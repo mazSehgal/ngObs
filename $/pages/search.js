@@ -12,7 +12,7 @@ $.pages["Search"] = (function () {
 	
 	var button = document.createElement("button");
 	main.appendChild(button);
-	button.textContent = $v[1];
+	button.textContent = "Go";
 	button.onpointerdown = function () {
 		$.nav.load("Search Results");
 	};
