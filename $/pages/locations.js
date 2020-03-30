@@ -46,10 +46,28 @@ function init () {
 		
 			var div = document.createElement("div");
 			ele.appendChild(div);
-			div.textContent = $v.Desc;
+			div.style.flex = "1 1 auto";
+			div.style.display = "flex";
+			div.style.flexDirection = "column";
+		
+				var strong = document.createElement("strong");
+				div.appendChild(strong);
+				strong.style.textContent = $v.Desc;
+		
+				var span = document.createElement("span");
+				div.appendChild(span);
+		
+					var em = document.createElement("em");
+					span.appendChild(em);
+					em.style.textContent = "Code: " + $v.Code;
+
+					var em = document.createElement("em");
+					span.appendChild(em);
+					em.style.textContent = "Site: " + $v.Site;
 		
 			var button = document.createElement("button");
 			ele.appendChild(button);
+			button.style.flex = "0 0 auto";
 			button.textContent = ">";
 			button.onpointerdown = function () {
 				$.nav.load("Patient List", {"Location": $v.Code});
