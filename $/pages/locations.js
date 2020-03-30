@@ -44,7 +44,7 @@ function init () {
 		ele.style.backgroundColor = "white";
 		
 			var strong = document.createElement("strong");
-			div.appendChild(strong);
+			ele.appendChild(strong);
 			strong.style.gridColumn = "span 2";
 			strong.textContent = $v.Desc;
 		
