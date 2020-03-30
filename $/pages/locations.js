@@ -49,6 +49,7 @@ function init () {
 			div.style.flex = "1 1 auto";
 			div.style.display = "flex";
 			div.style.flexDirection = "column";
+			div.style.justifyContent = "space-evenly";
 		
 				var strong = document.createElement("strong");
 				div.appendChild(strong);
@@ -62,12 +63,12 @@ function init () {
 		
 					var em = document.createElement("em");
 					span.appendChild(em);
-					em.style.flex = "1 1 50%";
+					em.style.flex = "1 1 50px";
 					em.textContent = "Code: " + $v.Code;
 
 					var em = document.createElement("em");
 					span.appendChild(em);
-					em.style.flex = "1 1 50%";
+					em.style.flex = "1 1 50px";
 					em.textContent = "Site: " + $v.Site;
 		
 			var button = document.createElement("button");
