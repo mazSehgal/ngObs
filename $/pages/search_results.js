@@ -9,8 +9,13 @@ $.pages["Search Results"] = (function () {
 	};
 	
 	var main = document.createElement("main");
-	main.textContent = "Search results...";
-  
+	
+	var button = document.createElement("button");
+	main.appendChild(button);
+	button.textContent = "Go";
+	button.onpointerdown = function () {
+		$.nav.load("Patient");
+	};
   
 	return {
 		"forward": forward,
