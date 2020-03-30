@@ -9,9 +9,14 @@ $.pages["Search"] = (function () {
 	};
 	
 	var main = document.createElement("main");
-	main.textContent = "Search...";
-  
-  
+	
+	var button = document.createElement("button");
+	main.appendChild(button);
+	button.textContent = $v[1];
+	button.onpointerdown = function () {
+		$.nav.load("Search Results");
+	};
+	
 	return {
 		"forward": forward,
 		"back": back,
