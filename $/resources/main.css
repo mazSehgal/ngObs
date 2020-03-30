@@ -1,3 +1,3 @@
-button { min-width:40px; min-height:40px; border-radius:5px; background-color:#41B6E6; margin:1px; }
+button { min-width:40px; min-height:40px; border-radius:5px; background-color:#CDDFF3; margin:1px; }
 button:not(disabled) { color:#005EB8; border:1px solid #005EB8; cursor:pointer; }
 button:disabled { color:#E8EDEE; border-color:#E8EDEE; cursor:default; }
