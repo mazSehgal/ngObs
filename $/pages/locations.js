@@ -30,13 +30,13 @@ function init () {
 	var datagrid = $.datagrid();
 	main.appendChild(datagrid);
 	datagrid.style.display = "grid";
-	datagrid.style.gridGap = "5px";
 	datagrid.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 1fr))";
 	
 	datagrid.ftn = function ($v) {
 		
 		var ele = document.createElement("div");
 		ele.style.display = "grid";
+		datagrid.style.gridGap = "5px";
 		ele.style.gridTemplateColumns = "1fr 1fr auto";
 		ele.style.alignItems = "center";
 		ele.style.border = "1px solid grey";
