@@ -1,10 +1,6 @@
 $.db = (function () {
-
-	function delay ($ms) {
-		return new Promise(function (res) { setTimeout(res, $ms); });
-	};
 	
-	async function query ($in, $ftn) {
+	function query ($in, $ftn) {
 		
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function () {
@@ -17,7 +13,6 @@ $.db = (function () {
 		//xhr.send(JSON.stringify($in));
 		
 		xhr.open("GET", $.const.root + "!/" + $in[0] + ".dat", true);
-		await delay(1000);
 		xhr.send();
 		
 	};
