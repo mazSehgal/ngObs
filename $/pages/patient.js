@@ -62,6 +62,8 @@ function init () {
 			var em = document.createElement("em");
 			ele.appendChild(em);
 			em.style.gridColumn = "span 2";
+			em.style.fontSize = "0.7em";
+			em.style.borderBottom = "1px solid grey";
 			em.textContent = $v.Desc;
 
 			var div = document.createElement("div");
