@@ -9,7 +9,12 @@ var interval = setInterval(function () {
 function init () {	
 
 	function forward () {
-		back();
+		
+		$.db.query(["locations", {}], function ($d) {
+			datagrid.data = $d;
+			back();
+		});
+
 	};
 
 	function back () {
@@ -27,24 +32,6 @@ function init () {
 	datagrid.style.display = "grid";
 	datagrid.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 1fr))";
 	
-	datagrid.data = [
-		{"Code": "1", "Desc": "Ward 1"},
-		{"Code": "2", "Desc": "Ward 2"},
-		{"Code": "3", "Desc": "Ward 3"},
-		{"Code": "4", "Desc": "Ward 4"},
-		{"Code": "1", "Desc": "Ward 1"},
-		{"Code": "2", "Desc": "Ward 2"},
-		{"Code": "3", "Desc": "Ward 3"},
-		{"Code": "4", "Desc": "Ward 4"},
-		{"Code": "1", "Desc": "Ward 1"},
-		{"Code": "2", "Desc": "Ward 2"},
-		{"Code": "3", "Desc": "Ward 3"},
-		{"Code": "4", "Desc": "Ward 4"},
-		{"Code": "1", "Desc": "Ward 1"},
-		{"Code": "2", "Desc": "Ward 2"},
-		{"Code": "3", "Desc": "Ward 3"},
-		{"Code": "4", "Desc": "Ward 4"},
-	];
 	datagrid.ftn = function ($v) {
 		
 		var ele = document.createElement("div");
