@@ -38,7 +38,7 @@ function init () {
 		ele.style.display = "flex";
 		ele.style.border = "1px solid grey";
 		ele.style.borderRadius = "10px";
-		ele.style.margin = "5px";
+		ele.style.margin = "2px";
 		ele.style.padding = "5px";
 		ele.style.backgroundColor = "white";
 		
