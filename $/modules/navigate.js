@@ -14,14 +14,14 @@
 		
 		document.querySelector("#buttonBack").disabled = (historyList.length > 2) ? false : true;
 		document.querySelector("#buttonMenu").disabled = (historyList.length > 2) ? false : true;
-	
+		
 		return historyList.slice(-1)[0];
 	
 	};
 	
-	function load ($page) {
+	function load ($page, $in) {
+		$.pages[$page].forward($in);
 		history($page);
-		$.pages[$page].forward();
 	};
 	
 	function back ($page) {
