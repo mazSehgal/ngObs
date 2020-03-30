@@ -52,18 +52,18 @@ function init () {
 		
 				var strong = document.createElement("strong");
 				div.appendChild(strong);
-				strong.style.textContent = $v.Desc;
+				strong.textContent = $v.Desc;
 		
 				var span = document.createElement("span");
 				div.appendChild(span);
 		
 					var em = document.createElement("em");
 					span.appendChild(em);
-					em.style.textContent = "Code: " + $v.Code;
+					em.textContent = "Code: " + $v.Code;
 
 					var em = document.createElement("em");
 					span.appendChild(em);
-					em.style.textContent = "Site: " + $v.Site;
+					em.textContent = "Site: " + $v.Site;
 		
 			var button = document.createElement("button");
 			ele.appendChild(button);
