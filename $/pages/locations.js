@@ -36,8 +36,6 @@ function init () {
 		
 		var ele = document.createElement("div");
 		ele.style.display = "flex";
-		ele.style.justifyContent = "space-between";
-		ele.style.alignItems = "center";
 		ele.style.border = "1px solid grey";
 		ele.style.borderRadius = "10px";
 		ele.style.margin = "5px";
