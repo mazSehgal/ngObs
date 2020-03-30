@@ -92,7 +92,11 @@ p.textContent = "Attention";
 
 var p = document.createElement("p");
 div.appendChild(p);
-p.textContent = "Something or other goes here...";
+p.textContent = "You are about to access sensitive patient information. By continuing you are agreeing to the terms and conditions which were given to you when issued a login.";
+
+var p = document.createElement("p");
+div.appendChild(p);
+p.textContent = "User access is regularly audited. Inappropriate use of the information held on this system or using others' access is a breach of both the Data Protection Act 1998 and the Computer Misuse Act 1990 and will be dealt with in accordance with the Trusts Disciplinary Policy.";
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
