@@ -65,7 +65,7 @@ function init () {
 					
 						var em = document.createElement("em");
 						span.appendChild(em);
-						em.textContent = "Code";
+						em.textContent = "Code ";
 						
 						span.appendChild(document.createTextNode($v.Code));
 
@@ -75,7 +75,7 @@ function init () {
 					
 						var em = document.createElement("em");
 						span.appendChild(em);
-						em.textContent = "Site";
+						em.textContent = "Site ";
 						
 						span.appendChild(document.createTextNode($v.Site));
 		
