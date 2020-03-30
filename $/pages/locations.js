@@ -56,13 +56,18 @@ function init () {
 		
 				var span = document.createElement("span");
 				div.appendChild(span);
+				span.style.display = "flex";
+				span.style.color = "grey";
+				span.style.fontSize = "0.7em";
 		
 					var em = document.createElement("em");
 					span.appendChild(em);
+					em.style.flex = "1 1 auto";
 					em.textContent = "Code: " + $v.Code;
 
 					var em = document.createElement("em");
 					span.appendChild(em);
+					em.style.flex = "1 1 auto";
 					em.textContent = "Site: " + $v.Site;
 		
 			var button = document.createElement("button");
