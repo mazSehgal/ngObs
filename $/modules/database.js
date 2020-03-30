@@ -10,7 +10,7 @@ $.db = (function () {
 		xhr.onreadystatechange = function () {
 			if (xhr.readyState !== 4) return;
 			if (xhr.status !== 200) return;
-			$ftn(xhr.responseText);
+			$ftn(JSON.parse(xhr.responseText));
 		};
 		
 		//xhr.open("POST", $.const.root + "!/api.php", true);
