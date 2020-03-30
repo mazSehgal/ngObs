@@ -35,58 +35,50 @@ function init () {
 	datagrid.ftn = function ($v) {
 		
 		var ele = document.createElement("div");
-		ele.style.display = "flex";
+		ele.style.display = "grid";
+		ele.style.gridTemplateColumns = "1fr 1fr auto";
 		ele.style.border = "1px solid grey";
 		ele.style.borderRadius = "10px";
 		ele.style.margin = "2px";
 		ele.style.padding = "5px";
 		ele.style.backgroundColor = "white";
 		
-			var div = document.createElement("div");
-			ele.appendChild(div);
-			div.style.flex = "1 1 auto";
-			div.style.display = "flex";
-			div.style.flexDirection = "column";
-			div.style.justifyContent = "space-evenly";
-		
-				var strong = document.createElement("strong");
-				div.appendChild(strong);
-				strong.textContent = $v.Desc;
-		
-				var div2 = document.createElement("div");
-				div.appendChild(div2);
-				div2.style.display = "flex";
-				div2.style.color = "grey";
-				div2.style.fontSize = "0.7em";
-		
-					var span = document.createElement("span");
-					div2.appendChild(span);
-					span.style.flex = "1 1 50px";
-					
-						var em = document.createElement("em");
-						span.appendChild(em);
-						em.textContent = "Code ";
-						
-						span.appendChild(document.createTextNode($v.Code));
-
-					var span = document.createElement("span");
-					div2.appendChild(span);
-					span.style.flex = "1 1 50px";
-					
-						var em = document.createElement("em");
-						span.appendChild(em);
-						em.textContent = "Site ";
-						
-						span.appendChild(document.createTextNode($v.Site));
+			var strong = document.createElement("strong");
+			div.appendChild(strong);
+			strong.style.gridColumn = "span 2";
+			strong.textContent = $v.Desc;
 		
 			var button = document.createElement("button");
 			ele.appendChild(button);
-			button.style.flex = "0 0 auto";
+			button.style.gridRow = "span 2";
 			button.textContent = ">";
 			button.onpointerdown = function () {
 				$.nav.load("Patient List", {"Location": $v.Code});
 			};
+
+			var div = document.createElement("div");
+			ele.appendChild(div);
+			div.style.color = "grey";
+			div.style.fontSize = "0.7em";
+
+				var em = document.createElement("em");
+				div.appendChild(em);
+				em.textContent = "Code ";
+						
+				div.appendChild(document.createTextNode($v.Code));
+
+			var div = document.createElement("div");
+			ele.appendChild(div);
+			div.style.color = "grey";
+			div.style.fontSize = "0.7em";
+
+				var em = document.createElement("em");
+				div.appendChild(em);
+				em.textContent = "Site ";
+						
+				div.appendChild(document.createTextNode($v.Site));
 		
+					
 		return ele;
 		
 	};
