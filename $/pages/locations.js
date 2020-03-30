@@ -37,6 +37,7 @@ function init () {
 		var ele = document.createElement("div");
 		ele.style.display = "grid";
 		ele.style.gridTemplateColumns = "1fr 1fr auto";
+		ele.style.alignItems = "center";
 		ele.style.border = "1px solid grey";
 		ele.style.borderRadius = "10px";
 		ele.style.margin = "2px";
@@ -58,6 +59,7 @@ function init () {
 
 			var div = document.createElement("div");
 			ele.appendChild(div);
+			div.style.whiteSpace = "nowrap";
 			div.style.color = "grey";
 			div.style.fontSize = "0.7em";
 
@@ -69,6 +71,7 @@ function init () {
 
 			var div = document.createElement("div");
 			ele.appendChild(div);
+			div.style.whiteSpace = "nowrap";
 			div.style.color = "grey";
 			div.style.fontSize = "0.7em";
 
