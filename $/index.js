@@ -106,6 +106,7 @@ setTimeout(function () {
 		"$/modules/navigate.js",
 		"$/modules/database.js",
 		"$/modules/datagrid.js",
+		"$/modules/patient_banner.js",
 		"$/pages/menu.js",
 		"$/pages/sign_in.js",
 		"$/pages/fluids.js",
