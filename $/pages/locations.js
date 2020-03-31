@@ -1,13 +1,8 @@
-(function () {
+$.await(["$.datagrid"], function () {
+$.pages["Locations"] =  (function () {
 
-var interval = setInterval(function () {
-	if ($.datagrid === undefined) return;
-	clearInterval(interval);
-	$.pages["Locations"] =  init();
-}, 200);
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 	
-function init () {	
-
 	function forward ($in) {
 		
 		$.db.query(["locations", {}], function ($d) {
@@ -91,7 +86,7 @@ function init () {
 		"forward": forward,
 		"back": back,
 	};
-	
-};
-  
-}());
+
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+}()); });
