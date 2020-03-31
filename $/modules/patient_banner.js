@@ -11,8 +11,8 @@ $.patientBanner = (function () {
 		patientBanner.style.display = ($show === true) ? "flex" : "none";
 	};
 	
-	function build ($in) {
-		patientBanner.textContent = $in;
+	function build () {
+		patientBanner.textContent = store;
 	};
 	
 	Object.defineProperties(patientBanner, {
