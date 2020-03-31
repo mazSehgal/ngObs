@@ -79,6 +79,20 @@ setTimeout(function () {
 	var main = document.createElement("main");
 	document.body.appendChild(main);
 	
+	$.await = function ($arr, $cb) {
+		var counter = 0;
+		var interval = setInterval(function () {
+			var pass = true;
+			$arr.forEach(function ($v) {
+				if (typeof eval($v) === "undefined") pass = false;
+			});
+			if (++counter < 100 && pass === false) return;
+			if (counter === 100) console.error("Await waited too long...");
+			clearInterval(interval);
+			$cb();
+		}, 100);
+	};
+	
 	$.pages = {};
 	
 	var loadList = [
@@ -110,7 +124,7 @@ setTimeout(function () {
 		
 	});
 	
-	if (window.navigator.standalone == false) {
+	if (navigator.standalone == false) {
 		alert("Apps work best when launched from the home screen");
 	};
 	
