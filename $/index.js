@@ -14,7 +14,7 @@ setTimeout(function () {
 		for (let mutation of $mutationsList) {
 			mutation.addedNodes.forEach(function ($v) {
 				$v.querySelectorAll("button").forEach(function ($v2) {
-					if (typeof $v.ngpointerdown === "undefined") return;
+					if (typeof $v2.ngpointerdown === "undefined") return;
 					$v2.onpointerdown = function ($in) {
 						if ($v2.disabled === true || tempDisable === true) return;
 						tempDisable = true;
