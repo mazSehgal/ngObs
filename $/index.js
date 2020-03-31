@@ -42,10 +42,8 @@ setTimeout(function () {
 		button.textContent = "<";
 		button.style.flex = "0 0 auto";
 		button.disabled = true;
-		var counter = 0;
 		button.onpointerdown = function () {
 			if (this.disabled === true) return;
-			alert(++counter);
 			$.nav.back();
 		};
 	
