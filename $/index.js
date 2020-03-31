@@ -72,8 +72,11 @@ setTimeout(function () {
 		button.style.flex = "0 0 auto";
 		button.disabled = true;
 		button.textContent = "=";
+		
+		button.tempDisable = false;
 		button.onpointerdown = function () {
-			if (this.disabled === true) return;
+			if (this.disabled === true || this.tempDisable === true) return;
+			this.tempDisable = true; setTimeout(function () { this.tempDisable = false; }, 100);
 			$.nav.back("Menu");
 		};
 	
