@@ -12,7 +12,7 @@ $.patientBanner = (function () {
 	};
 	
 	function build () {
-		patientBanner.textContent = store;
+		patientBanner.textContent = JSON.stringify(store);
 	};
 	
 	Object.defineProperties(patientBanner, {
