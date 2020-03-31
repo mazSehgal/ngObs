@@ -77,6 +77,14 @@ setTimeout(function () {
 			$.nav.back("Menu");
 		};
 	
+	var header = document.createElement("header");
+	document.body.appendChild(header);
+	header.id = "patientBanner";
+	header.style.flex = "0 0 auto";
+	header.style.display = "none";
+	header.style.backgroundColor = "lightblue";
+	header.textContent = "Patient Banner";
+	
 	var main = document.createElement("main");
 	document.body.appendChild(main);
 	
