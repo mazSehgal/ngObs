@@ -9,14 +9,15 @@ setTimeout(function () {
 		return "Are you sure?";
 	};
 	
-	var observer = new MutationObserver(function ($mutationsList) {
+	new MutationObserver(function ($mutationsList) {
 		for (let mutation of $mutationsList) {
 			mutation.addedNodes.forEach(function ($v) {
-				console.log($v);
+				$v.querySelectorAll("button").forEach(function ($v2) {
+					console.log($v2);
+				});
 			});
 		};
-	});
-	observer.observe(document.body, { attributes:true, childList:true });
+	}).observe(document.body, { attributes:true, childList:true });
 	
 	var link = document.createElement("link");
 	document.head.appendChild(link);
