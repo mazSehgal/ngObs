@@ -43,8 +43,10 @@ setTimeout(function () {
 		button.style.flex = "0 0 auto";
 		button.disabled = true;
 		button.onpointerdown = function () {
-			event.preventDefault();
 			if (this.disabled === true) return;
+			var temp = this.onpointerdown;
+			this.onpointerdown = function () { console.log("Blocked"); };
+			setTimeout(function () { this.onpointerdown = temp; }, 500);
 			$.nav.back();
 		};
 	
