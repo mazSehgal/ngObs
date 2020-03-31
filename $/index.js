@@ -31,7 +31,8 @@ setTimeout(function () {
 	var header = document.createElement("header");
 	document.body.appendChild(header);
 	header.style.flex = "0 0 auto";
-	header.style.backgroundColor = "darkgrey";
+	header.style.backgroundColor = "#005EB8";
+	header.style.color = "#FFFFFF";
 	header.style.borderBottom = "3px solid #EEEEEE";
 	header.style.display = "flex";
 
