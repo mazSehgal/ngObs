@@ -4,8 +4,8 @@ $.patientBanner = (function () {
 	var store = {};
 	
 	var patientBanner = document.querySelector("#patientBanner");
-	header.style.backgroundColor = "lightblue";
-	header.textContent = "Patient Banner";
+	patientBanner.style.backgroundColor = "lightblue";
+	patientBanner.textContent = "Patient Banner";
 	
 	function showBanner ($show) {
 		patientBanner.style.display = ($show === true) ? "flex" : "none";
