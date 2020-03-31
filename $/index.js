@@ -9,11 +9,11 @@ setTimeout(function () {
 		return "Are you sure?";
 	};
 	
-	var observer = new MutationObserver(function () {
-		console.log(document.querySelectorAll("button['ngpointerdown']"));
+	var observer = new MutationObserver(function ($mutationsList) {
+		console.log($mutationsList);
 	});
 	observer.observe(document.body, { attributes:true, childList:true });
-
+	
 	var link = document.createElement("link");
 	document.head.appendChild(link);
 	link.href = $.const.root + "$/resources/splash.png";
