@@ -56,7 +56,7 @@ function init () {
 			button.style.borderRadius = "999px";
 			button.textContent = ">";
 			button.onpointerdown = function () {
-				//$.nav.load("Patient List", {"Location": $v.Code});
+				$.nav.load($v.Type, {"EPN": 1200856});
 			};
 		
 			var em = document.createElement("em");
