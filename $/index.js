@@ -11,7 +11,9 @@ setTimeout(function () {
 	
 	var observer = new MutationObserver(function ($mutationsList) {
 		for (let mutation of $mutationsList) {
-			console.log(mutation.addedNodes);
+			mutation.addedNodes.forEach(function ($v) {
+				console.log($v);
+			});
 		};
 	});
 	observer.observe(document.body, { attributes:true, childList:true });
