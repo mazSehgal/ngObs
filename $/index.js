@@ -18,6 +18,7 @@ setTimeout(function () {
 				$y.querySelectorAll("button").forEach(function ($z) {
 					if (typeof $z.ngpointerdown === "undefined") return;
 					$z.onpointerdown = function ($in) {
+						event.preventDefault();
 						if ($z.disabled === true || tempDisable === true) return;
 						tempDisable = true;
 						setTimeout(function () { tempDisable = false; }, 333);
