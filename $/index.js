@@ -21,7 +21,7 @@ setTimeout(function () {
 						event.preventDefault();
 						if ($z.disabled === true || tempDisable === true) return;
 						tempDisable = true;
-						setTimeout(function () { tempDisable = false; }, 333);
+						setTimeout(function () { tempDisable = false; }, 667);
 						$z.ngpointerdown($in);
 					};
 				});
