@@ -18,6 +18,7 @@ function init () {
 	};
 
 	function back () {
+		$.nav.patientBanner(true);
 		document.querySelector("main").replaceWith(main);
 	};
 
