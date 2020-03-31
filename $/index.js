@@ -11,9 +11,9 @@ setTimeout(function () {
 	
 	var link = document.createElement("link");
 	document.head.appendChild(link);
+	link.href = $.const.root + "$/resources/splash.png";
 	link.rel = "preload";
 	link.as = "image";
-	link.href = $.const.root + "$/resources/splash.png";
 	
 	var link = document.createElement("link");
 	document.head.appendChild(link);
