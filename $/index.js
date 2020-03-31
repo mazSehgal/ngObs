@@ -20,7 +20,7 @@ setTimeout(function () {
 					$z.onpointerdown = function ($in) {
 						if ($z.disabled === true || tempDisable === true) return;
 						tempDisable = true;
-						setTimeout(function () { tempDisable = false; }, 1000);
+						setTimeout(function () { tempDisable = false; }, 333);
 						$z.ngpointerdown($in);
 					};
 				});
@@ -82,7 +82,7 @@ setTimeout(function () {
 		header.appendChild(button);
 		button.textContent = "?";
 		button.style.flex = "0 0 auto";
-		button.onpointerdown = function () {
+		button.ngpointerdown = function () {
 			alert("Help");
 		};
 	
@@ -92,8 +92,7 @@ setTimeout(function () {
 		button.style.flex = "0 0 auto";
 		button.disabled = true;
 		button.textContent = "=";
-		button.onpointerdown = function () {
-			if (this.disabled === true) return;
+		button.ngpointerdown = function () {
 			$.nav.back("Menu");
 		};
 	
