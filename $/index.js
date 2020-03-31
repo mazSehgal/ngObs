@@ -137,9 +137,5 @@ setTimeout(function () {
 		};
 		
 	});
-	
-	if (navigator.standalone == false) {
-		alert("Apps work best when launched from the home screen");
-	};
-	
+
 }());
