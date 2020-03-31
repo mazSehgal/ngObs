@@ -1,5 +1,5 @@
 * { -webkit-overflow-scrolling:touch; }
 
-button { min-width:40px; min-height:40px; border-radius:5px; background-color:#CDDFF3; margin:1px; user-select:none; }
+button { min-width:40px; min-height:40px; border-radius:5px; background-color:#CDDFF3; margin:1px; -webkit-touch-callout:none; }
 button:not(disabled) { color:#005EB8; border:1px solid #005EB8; cursor:pointer; }
 button:disabled { color:#E8EDEE; border-color:#E8EDEE; cursor:default; }
