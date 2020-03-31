@@ -31,16 +31,11 @@
 		if ($page !== undefined && $page !== page) back($page);
 	};
 	
-	function patientBanner ($show) {
-		document.querySelector("#patientBanner").style.display = ($show === true) ? "flex" : "none";
-	};
-	
 	document.querySelector("main")
 	
 	$.nav = {
 		"load": load,
 		"back": back,
-		"patientBanner": patientBanner,
 	};
 	
 }());
