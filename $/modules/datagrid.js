@@ -1,6 +1,6 @@
-$.datagrid = (function () {
+(function () {
 
-	return function () {
+	$.datagrid = function () {
 
 		var store = {
 			"ftn": null,
