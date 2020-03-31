@@ -109,6 +109,12 @@ setTimeout(function () {
 		"$/pages/search.js",
 		"$/pages/search_results.js",
 		"$/pages/admin.js",
+		"$/pages/news2.js",
+		"$/pages/sepsis_tool.js",
+		"$/pages/abbey_pain_tool.js",
+		"$/pages/ed_emergency_triage.js",
+		"$/pages/pain_assessment.js",
+		"$/pages/symptom_observations.js",
 	];
 	
 	var counter = loadList.length;
