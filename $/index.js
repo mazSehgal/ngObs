@@ -43,11 +43,16 @@ setTimeout(function () {
 		button.style.flex = "0 0 auto";
 		button.disabled = true;
 		button.onpointerdown = function () {
-			if (this.disabled === true) return;
-			var temp = this.onpointerdown;
-			this.onpointerdown = function () { console.log("Blocked"); };
-			setTimeout(function () { this.onpointerdown = temp; }, 500);
+			if ($.isBusy(this)) return;
 			$.nav.back();
+		};
+	
+		var busy = false;
+		$.isBusy = function ($that) {
+			if ($that.disabled === true) return true;
+			if (busy === true) return true;
+			busy = true; setTimeout(function () { busy = false; }, 2000);
+			return false;
 		};
 	
 		var div = document.createElement("div");
