@@ -42,8 +42,10 @@ setTimeout(function () {
 		button.textContent = "<";
 		button.style.flex = "0 0 auto";
 		button.disabled = true;
+		var counter = 0;
 		button.onpointerdown = function () {
 			if (this.disabled === true) return;
+			alert(++counter);
 			$.nav.back();
 		};
 	
@@ -72,11 +74,8 @@ setTimeout(function () {
 		button.style.flex = "0 0 auto";
 		button.disabled = true;
 		button.textContent = "=";
-		
-		button.tempDisable = false;
 		button.onpointerdown = function () {
-			if (this.disabled === true || this.tempDisable === true) return;
-			this.tempDisable = true; setTimeout(function () { this.tempDisable = false; }, 100);
+			if (this.disabled === true) return;
 			$.nav.back("Menu");
 		};
 	
