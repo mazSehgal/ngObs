@@ -9,11 +9,18 @@ setTimeout(function () {
 		return "Are you sure?";
 	};
 	
+	var tempDisable = false;
 	new MutationObserver(function ($mutationsList) {
 		for (let mutation of $mutationsList) {
 			mutation.addedNodes.forEach(function ($v) {
 				$v.querySelectorAll("button").forEach(function ($v2) {
-					console.log($v2);
+					if (typeof $v.ngpointerdown === "undefined") return;
+					$v2.onpointerdown = function ($in) {
+						if ($v2.disabled === true || tempDisable === true) return;
+						tempDisable = true;
+						setTimeout(function () { tempDisable = false; }, 1000);
+						$v2.ngpointerdown($in);
+					};
 				});
 			});
 		};
