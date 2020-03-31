@@ -10,7 +10,7 @@ setTimeout(function () {
 	};
 	
 	var observer = new MutationObserver(function ($mutationsList) {
-		console.log($mutationsList);
+		console.log($mutationsList.addedNodes);
 	});
 	observer.observe(document.body, { attributes:true, childList:true });
 	
