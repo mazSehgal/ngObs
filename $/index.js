@@ -9,6 +9,11 @@ setTimeout(function () {
 		return "Are you sure?";
 	};
 	
+	var observer = new MutationObserver(function () {
+		console.log(document.querySelectorAll("button['ngpointerdown']"));
+	});
+	observer.observe(document.body, { attributes:true, childList:true });
+
 	var link = document.createElement("link");
 	document.head.appendChild(link);
 	link.href = $.const.root + "$/resources/splash.png";
@@ -42,19 +47,10 @@ setTimeout(function () {
 		button.textContent = "<";
 		button.style.flex = "0 0 auto";
 		button.disabled = true;
-		button.onpointerdown = function () {
-			if ($.isBusy(this)) return;
+		button.ngpointerdown = function () {
 			$.nav.back();
 		};
-	
-		var busy = false;
-		$.isBusy = function ($that) {
-			if ($that.disabled === true) return true;
-			if (busy === true) return true;
-			busy = true; setTimeout(function () { busy = false; }, 2000);
-			return false;
-		};
-	
+		
 		var div = document.createElement("div");
 		header.appendChild(div);
 		div.style.flex = "1 1 auto";
