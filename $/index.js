@@ -9,22 +9,26 @@ setTimeout(function () {
 		return "Are you sure?";
 	};
 	
+	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+	
 	var tempDisable = false;
 	new MutationObserver(function ($mutationsList) {
-		for (let mutation of $mutationsList) {
-			mutation.addedNodes.forEach(function ($v) {
-				$v.querySelectorAll("button").forEach(function ($v2) {
-					if (typeof $v2.ngpointerdown === "undefined") return;
-					$v2.onpointerdown = function ($in) {
-						if ($v2.disabled === true || tempDisable === true) return;
+		$mutationsList.forEach(function ($x) {
+			$x.addedNodes.forEach(function ($y) {
+				$y.querySelectorAll("button").forEach(function ($z) {
+					if (typeof $z.ngpointerdown === "undefined") return;
+					$z.onpointerdown = function ($in) {
+						if ($z.disabled === true || tempDisable === true) return;
 						tempDisable = true;
 						setTimeout(function () { tempDisable = false; }, 1000);
-						$v2.ngpointerdown($in);
+						$z.ngpointerdown($in);
 					};
 				});
 			});
-		};
+		});
 	}).observe(document.body, { attributes:true, childList:true });
+	
+	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 	
 	var link = document.createElement("link");
 	document.head.appendChild(link);
