@@ -30,13 +30,6 @@ setTimeout(function () {
 	}).observe(document.body, { attributes:true, childList:true });
 	
 	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
-	addEventListener("orientationchange", function () {
-		document.body.style.marginRight = "1px";
-		setTimeout(function () { document.body.style.marginRight = "0"; }, 100);
-	}, false);
-	
-	// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 	
 	var link = document.createElement("link");
 	document.head.appendChild(link);
