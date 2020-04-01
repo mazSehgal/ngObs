@@ -2,7 +2,7 @@
 
 @media screen and (min-width: 400px) {
   body {
-    background-color: lightgreen;
+    border:5px solid lightgreen;
   }
 }
 
