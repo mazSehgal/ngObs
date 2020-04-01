@@ -3,11 +3,11 @@ $.const.PIN = "1234";
 (function () {
 
   var timer = new Date();
-  window.addEventListener("pointermove", function () { timer = new Date(); });
-  window.addEventListener("pointerdown", function () { timer = new Date(); });
-  window.addEventListener("keydown", function () { timer = new Date(); });
+  addEventListener("pointermove", function () { timer = new Date(); });
+  addEventListener("pointerdown", function () { timer = new Date(); });
+  addEventListener("keydown", function () { timer = new Date(); });
 
-  setInterval(lockScreen, 1 * 1000);
+  setInterval(lockScreen, 10 * 1000);
   document.addEventListener("visibilitychange", function () {
     if (document.hidden === true) return; 
     lockScreen();
@@ -16,7 +16,7 @@ $.const.PIN = "1234";
   function lockScreen () {
     if (pinScreen.parentElement !== null) return;
     if (document.querySelector("main[nolock]") !== null) return;
-    if (new Date() - timer < 30 * 1000) return;
+    if (new Date() - timer < 1 * 60 * 1000) return;
     document.body.appendChild(pinScreen);
   };
 
