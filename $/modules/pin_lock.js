@@ -6,7 +6,7 @@ $.const.PIN = "1234";
   window.addEventListener("pointermove", function () { timer = new Date(); });
   window.addEventListener("keydown", function () { timer = new Date(); });
 
-  setInterval(lockScreen, 20 * 1000);
+  setInterval(lockScreen, 1 * 1000);
   document.addEventListener("visibilitychange", function () {
     if (document.hidden === true) return; 
     lockScreen();
@@ -15,7 +15,7 @@ $.const.PIN = "1234";
   function lockScreen () {
     if (pinScreen.parentElement !== null) return;
     if (document.querySelector("main[nolock]") !== null) return;
-    if (new Date() - timer < 15 * 60 * 1000) return;
+    if (new Date() - timer < 30 * 1000) return;
     document.body.appendChild(pinScreen);
   };
 
