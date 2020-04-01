@@ -1,6 +1,6 @@
 * { -webkit-overflow-scrolling:touch; box-sizing:border-box; }
 
-@media screen and (max-width: 400px or max-height: 400px) {
+@media (max-width: 400px), (max-height: 400px) {
   body { border:5px solid lightgreen; }
 }
 
