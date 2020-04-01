@@ -34,17 +34,7 @@
 	<preference name="SuppressesLongPressGesture" value="true" />
 	
 	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
-		
-	<edit-config target="UIStatusBarHidden" file="*-Info.plist" mode="overwrite" platform="ios">
-		<true/>
-	</edit-config>
-
-	<edit-config target="UIViewControllerBasedStatusBarAppearance" file="*-Info.plist" mode="overwrite" platform="ios">
-		<false/>
-	</edit-config>
-	
-	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
-		
+			
 	<plugin name="cordova-plugin-device" />
 	
 	<plugin name="cordova-plugin-dialogs" />
