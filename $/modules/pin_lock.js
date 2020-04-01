@@ -4,6 +4,7 @@ $.const.PIN = "1234";
 
   var timer = new Date();
   window.addEventListener("pointermove", function () { timer = new Date(); });
+  window.addEventListener("pointerdown", function () { timer = new Date(); });
   window.addEventListener("keydown", function () { timer = new Date(); });
 
   setInterval(lockScreen, 1 * 1000);
