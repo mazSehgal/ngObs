@@ -22,7 +22,8 @@ main.style.display = "flex";
 main.style.flexDirection = "column";
 main.style.alignItems = "center";
 main.style.justifyContent = "space-evenly";
-
+main.setAttribute("nolock", "");
+	
 var table = document.createElement("table");
 main.appendChild(table);
 table.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
