@@ -21,7 +21,7 @@ $.pages["Pressure Ulcers Add"] = (function () {
 			
 			function success ($imageData) {
         		store.image = $imageData;
-				build();
+				img.src = "data:image/png;base64," + store.image;
 			},
 			
 			function failure ($e) {},
@@ -45,10 +45,9 @@ $.pages["Pressure Ulcers Add"] = (function () {
 	img.style.maxWidth = "300px";
 	img.style.maxHeight = "300px";
 			
-	function build () {
-		img.src = "data:image/png;base64," + store.image;
-	}; 
-	
+	var textarea = document.createElement("textarea");
+	main.appendChild(textarea);
+
 	var button = document.createElement("button");
 	main.appendChild(button);
 	button.textContent = "Save";
