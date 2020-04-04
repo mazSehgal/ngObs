@@ -36,7 +36,7 @@ $.db = (function () {
 		div.style.transform = "translate(-50%,-50%)";
 			
 			var img = document.createElement("img"); div.appendChild(img);
-			img.src = $.const.root + "resources/spinner.png";
+			img.src = $.const.root + "$/resources/spinner.png";
 			img.style.animation = "spin 1s linear infinite";
 	
 	return {
