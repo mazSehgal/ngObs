@@ -9,7 +9,7 @@ $.db = (function () {
 			if (xhr.status !== 200) return;
 			$ftn(JSON.parse(xhr.responseText));
 			clearTimeout(timer);
-			if (document.body.contains(spinnerScreen) spinnerScreen.parentNode.removeChild(spinnerScreen);
+			if (document.body.contains(spinnerScreen) === true) spinnerScreen.parentNode.removeChild(spinnerScreen);
 		};
 		
 		//xhr.open("POST", $.const.root + "!/api.php", true);
