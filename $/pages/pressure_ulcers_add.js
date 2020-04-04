@@ -2,7 +2,7 @@ $.pages["Pressure Ulcers Add"] = (function () {
 
 	function forward () {
 		back();
-	});
+	}
 	
 	function back () {
 		document.querySelector("main").replaceWith(main);
