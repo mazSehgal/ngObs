@@ -22,7 +22,14 @@ $.pages["Pressure Ulcers"] = (function () {
 	main.appendChild(button);
 	button.textContent = "+";
 	button.ngpointerdown = function () {
+		
+		if (typeof cordova === "undefined") {
+			alert("Camera not found");
+			return;
+		);
+		
 		$.nav.load("Pressure Ulcers Add", {});
+		
 	};
 	
 	function build () {
@@ -44,7 +51,7 @@ $.pages["Pressure Ulcers"] = (function () {
 			div.appendChild(button);
 			button.textContent = ">";
 			button.ngpointerdown = function () {
-			
+				$.nav.load("Pressure Ulcers View", {});
 			};
 			
 		});
