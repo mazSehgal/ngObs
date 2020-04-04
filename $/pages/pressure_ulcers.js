@@ -13,7 +13,7 @@ $.pages["Pressure Ulcers"] = (function () {
 	var button = document.createElement("button");
 	main.appendChild(button);
 	button.textContent = "Snap";
-	button.ngpointerdown = function () {
+	button.onpointerdown = function () {
 		
 		navigator.camera.getPicture(
 			
@@ -30,7 +30,7 @@ $.pages["Pressure Ulcers"] = (function () {
 				encodingType: Camera.EncodingType.PNG,
 				mediaType: Camera.MediaType.PICTURE,
 				allowEdit: true,
-				correctOrientation: true  //Corrects Android orientation quirks
+				correctOrientation: true
 			}
 		);
 		
