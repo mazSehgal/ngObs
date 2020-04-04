@@ -1,17 +1,18 @@
 $.pages["Pressure Ulcers View"] = (function () {
 
-	function forward () {
+	function forward ($in, $cb) {
 		
 		$.db.query(["pressureUlcersView", {}], function ($d) {
 			store = $d[0];
 			build();
-			back();
+			back($cb);
 		});
 		
 	};
 	
-	function back () {
+	function back ($cb) {
 		document.querySelector("main").replaceWith(main);
+		$cb();
 	};
 	
 	var store = {};
