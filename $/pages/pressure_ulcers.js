@@ -23,6 +23,7 @@ $.pages["Pressure Ulcers"] = (function () {
 			
 			function success ($imageData) {
         			store.images.push($imageData);
+				build();
 			},
 			
 			function failure ($e) {},
