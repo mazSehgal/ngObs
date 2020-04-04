@@ -26,7 +26,7 @@ $.pages["Pressure Ulcers"] = (function () {
 		if (typeof cordova === "undefined") {
 			alert("Camera not found");
 			return;
-		);
+		};
 		
 		$.nav.load("Pressure Ulcers Add", {});
 		
