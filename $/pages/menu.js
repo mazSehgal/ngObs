@@ -55,4 +55,4 @@ $.pages["Menu"] = (function () {
 		"back": back,
 	};
 	
-}())
+}());
