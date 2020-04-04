@@ -134,6 +134,7 @@ setTimeout(function () {
 		"$/pages/patient.js",
 		"$/pages/patient_list.js",
 		"$/pages/pressure_ulcers.js",
+		"$/pages/pressure_ulcers_add.js",
 		"$/pages/locations.js",
 		"$/pages/search.js",
 		"$/pages/search_results.js",
