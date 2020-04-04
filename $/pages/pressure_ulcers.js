@@ -9,8 +9,35 @@ $.pages["Pressure Ulcers"] = (function () {
 	};
 	
 	var main = document.createElement("main");
-	main.textContent = "PU...";
-  
+	
+	var button = document.createElement("button");
+	main.appendChild(button);
+	button.textContent = "Snap";
+	button.ngpointerdown = function () {
+		
+		navigator.camera.getPicture(
+			
+			function cameraSuccess ($imageData) {
+        			img.src = "data:image/png;base64," + $imageData;
+			},
+			
+			function cameraError ($e) {},
+			
+			{
+				quality: 50,
+				destinationType: Camera.DestinationType.DATA_URL,
+				sourceType: PictureSourceType.CAMERA,
+				encodingType: Camera.EncodingType.PNG,
+				mediaType: Camera.MediaType.PICTURE,
+				allowEdit: true,
+				correctOrientation: true  //Corrects Android orientation quirks
+			}
+		);
+		
+	};
+	
+	var img = document.createElement("img");
+	main.appendChild(img);
   
 	return {
 		"forward": forward,
