@@ -1,11 +1,12 @@
 $.pages["ED Emergency Triage"] = (function () {
 
-	function forward () {
-		back();
+	function forward ($in, $cb) {
+		back($cb);
 	};
 	
-	function back () {
+	function back ($cb) {
 		document.querySelector("main").replaceWith(main);
+		$cb();
 	};
 	
 	var main = document.createElement("main");
