@@ -2,6 +2,8 @@
 
 @media (max-width:400px), (max-height:400px) { body { font-size:0.7em; } }
 
+@keyframes spin { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
+
 button { font-size:inherit; min-width:40px; min-height:40px; border-radius:5px; background-color:#CDDFF3; margin:1px; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; }
 button:not(disabled) { color:#005EB8; border:1px solid #005EB8; cursor:pointer; }
 button:disabled { color:#E8EDEE; border-color:#E8EDEE; cursor:default; }
