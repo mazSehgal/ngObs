@@ -1,5 +1,6 @@
 $.db = (function () {
 	
+	var timer;
 	function query ($in, $ftn) {
 		
 		var xhr = new XMLHttpRequest();
@@ -15,6 +16,11 @@ $.db = (function () {
 		
 		xhr.open("GET", $.const.root + "!/" + $in[0] + ".dat", true);
 		xhr.send();
+		
+		clearTimeout(timer);
+		img.style.visibility = "hidden";
+		timer = setTimeout(function () { img.style.visibility = "visible"; }, 1000);
+		
 		document.body.appendChild(spinnerScreen);
 		
 	};
