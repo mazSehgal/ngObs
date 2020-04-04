@@ -15,7 +15,7 @@ setTimeout(function () {
 	new MutationObserver(function ($mutationsList) {
 		$mutationsList.forEach(function ($x) {
 			$x.addedNodes.forEach(function ($y) {
-				$y.querySelectorAll("button, input[type='image']").forEach(function ($z) {
+				$y.querySelectorAll("button").forEach(function ($z) {
 					if (typeof $z.ngpointerdown === "undefined") return;
 					$z.onpointerdown = function ($in) {
 						event.preventDefault();
