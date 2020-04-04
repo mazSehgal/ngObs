@@ -22,7 +22,7 @@ $.pages["Pressure Ulcers"] = (function () {
 			},
 			
 			function cameraError ($e) {
-				console.log($e);
+				main.textContent = $e;
 			},
 			
 			{
