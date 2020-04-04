@@ -20,29 +20,9 @@ $.pages["Pressure Ulcers"] = (function () {
 	
 	var button = document.createElement("button");
 	main.appendChild(button);
-	button.textContent = "Snap";
+	button.textContent = "+";
 	button.ngpointerdown = function () {
-		
-		navigator.camera.getPicture(
-			
-			function success ($imageData) {
-        			store.images.push({"Image":$imageData});
-				build();
-			},
-			
-			function failure ($e) {},
-			
-			{
-				quality: 100,
-				destinationType: Camera.DestinationType.DATA_URL,
-				sourceType: Camera.PictureSourceType.CAMERA,
-				encodingType: Camera.EncodingType.PNG,
-				mediaType: Camera.MediaType.PICTURE,
-				allowEdit: false,
-				correctOrientation: true
-			}
-		);
-		
+		$.nav.load("Pressure Ulcers Add", {});
 	};
 	
 	function build () {
@@ -52,6 +32,7 @@ $.pages["Pressure Ulcers"] = (function () {
 			
 			var div = document.createElement("div");
 			gallery.appendChild(div);
+			div.style.border = "1px solid grey";
 			
 			var img = document.createElement("img");
 			div.appendChild(img);
@@ -63,12 +44,7 @@ $.pages["Pressure Ulcers"] = (function () {
 			div.appendChild(button);
 			button.textContent = ">";
 			button.ngpointerdown = function () {
-				var main2 = document.createElement("main");
-				main2.ngpointerdown = function () { document.querySelector("main").replaceWith(main); };
-				var img = document.createElement("img");
-				main2.appendChild(img);
-				img.src = "data:image/png;base64," + $v.Image;
-				document.querySelector("main").replaceWith(main2);
+			
 			};
 			
 		});
