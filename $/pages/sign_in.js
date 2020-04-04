@@ -2,13 +2,14 @@ $.pages["Sign In"] = (function () {
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
-function forward () {
+function forward ($in, $cb) {
 	ssoTry();
-	back();
+	back($cb);
 };
 
-function back () {
+function back ($cb) {
 	document.querySelector("main").replaceWith(main);
+	$cb();
 };
 
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
