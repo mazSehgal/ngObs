@@ -14,32 +14,31 @@ $.pages["Pressure Ulcers"] = (function () {
 	main.appendChild(button);
 	button.textContent = "Snap";
 	button.onpointerdown = function () {
-		try {
+		
 		navigator.camera.getPicture(
 			
-			function cameraSuccess ($imageData) {
+			function success ($imageData) {
         			img.src = "data:image/png;base64," + $imageData;
 			},
 			
-			function cameraError ($e) {
-				main.textContent = $e;
-			},
+			function failure ($e) {},
 			
 			{
-				quality: 50,
+				quality: 95,
 				destinationType: Camera.DestinationType.DATA_URL,
 				sourceType: Camera.PictureSourceType.CAMERA,
 				encodingType: Camera.EncodingType.PNG,
 				mediaType: Camera.MediaType.PICTURE,
-				allowEdit: true,
+				allowEdit: false,
 				correctOrientation: true
 			}
 		);
-		} catch ($e) { alert($e); };
+		
 	};
 	
 	var img = document.createElement("img");
 	main.appendChild(img);
+	img.style.width = "100%";
   
 	return {
 		"forward": forward,
