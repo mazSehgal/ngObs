@@ -1,12 +1,7 @@
-(function () {
+$.await(["$.datagrid"], function () {
+$.pages["Patient"] =  (function () {
 
-var interval = setInterval(function () {
-	if ($.datagrid === undefined) return;
-	clearInterval(interval);
-	$.pages["Patient"] =  init();
-}, 200);
-	
-function init () {	
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
 	function forward ($in, $cb) {
 		
@@ -90,6 +85,6 @@ function init () {
 		"back": back,
 	};
 	
-};
-  
-}());
+// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+}()); });
