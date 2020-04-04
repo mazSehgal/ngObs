@@ -1,12 +1,16 @@
 $.pages["Pressure Ulcers"] = (function () {
 
-  function forward () {
+	function forward () {
+		store.images = [];
+		build();
 		back();
 	};
 	
 	function back () {
 		document.querySelector("main").replaceWith(main);
 	};
+	
+	var store = {};
 	
 	var main = document.createElement("main");
 	
@@ -18,13 +22,13 @@ $.pages["Pressure Ulcers"] = (function () {
 		navigator.camera.getPicture(
 			
 			function success ($imageData) {
-        			img.src = "data:image/png;base64," + $imageData;
+        			store.images.push($imageData);
 			},
 			
 			function failure ($e) {},
 			
 			{
-				quality: 95,
+				quality: 100,
 				destinationType: Camera.DestinationType.DATA_URL,
 				sourceType: Camera.PictureSourceType.CAMERA,
 				encodingType: Camera.EncodingType.PNG,
@@ -36,10 +40,22 @@ $.pages["Pressure Ulcers"] = (function () {
 		
 	};
 	
-	var img = document.createElement("img");
-	main.appendChild(img);
-	img.style.width = "100%";
-  
+	function build () {
+		
+		gallery.textContent = "";
+		store.images.forEach(function ($v) {
+			var img = document.createElement("img");
+			gallery.appendChild(img);
+			img.style.maxWidth = "200px";
+			img.style.maxHeight = "200px";
+			img.src = "data:image/png;base64," + $v;
+		};
+	
+	}; 
+	
+	var gallery = document.createElement("div");
+	main.appendChild(gallery);
+	
 	return {
 		"forward": forward,
 		"back": back,
