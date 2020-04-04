@@ -18,7 +18,7 @@ $.db = (function () {
 		xhr.open("GET", $.const.root + "!/" + $in[0] + ".dat", true);
 		xhr.send();
 		
-		timer = setTimeout(function () { document.body.appendChild(spinnerScreen); }, 1000);
+		timer = setTimeout(function () { document.body.appendChild(spinnerScreen); }, 500);
 		
 	};
 	
