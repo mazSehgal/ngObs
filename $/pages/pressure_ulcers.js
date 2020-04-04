@@ -57,6 +57,7 @@ $.pages["Pressure Ulcers"] = (function () {
 			
 			var button = document.createElement("button");
 			div.appendChild(button);
+			button.textContent = ">";
 			button.ngpointerdown = function () {
 				var main2 = document.createElement("main");
 				main2.ngpointerdown = function () { document.querySelector("main").replaceWith(main); };
