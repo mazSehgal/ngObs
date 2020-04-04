@@ -45,12 +45,12 @@ $.pages["Pressure Ulcers"] = (function () {
 		
 		gallery.textContent = "";
 		store.images.forEach(function ($v) {
-			var img = document.createElement("img");
-			gallery.appendChild(img);
-			img.style.maxWidth = "200px";
-			img.style.maxHeight = "200px";
-			img.src = "data:image/png;base64," + $v;
-			img.ngpointerdown = function () {
+			
+			var button = document.createElement("button");
+			gallery.appendChild(button);
+			button.style.maxWidth = "200px";
+			button.style.maxHeight = "200px";
+			button.ngpointerdown = function () {
 				var main2 = document.createElement("main");
 				main2.ngpointerdown = function () { document.querySelector("main").replaceWith(main); };
 				var img = document.createElement("img");
@@ -58,6 +58,11 @@ $.pages["Pressure Ulcers"] = (function () {
 				img.src = "data:image/png;base64," + $v;
 				document.querySelector("main").replaceWith(main2);
 			};
+			
+			var img = document.createElement("img");
+			button.appendChild(img);
+			img.src = "data:image/png;base64," + $v;
+			
 		});
 	
 	}; 
