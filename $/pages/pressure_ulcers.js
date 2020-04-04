@@ -48,8 +48,6 @@ $.pages["Pressure Ulcers"] = (function () {
 			
 			var button = document.createElement("button");
 			gallery.appendChild(button);
-			button.style.maxWidth = "200px";
-			button.style.maxHeight = "200px";
 			button.ngpointerdown = function () {
 				var main2 = document.createElement("main");
 				main2.ngpointerdown = function () { document.querySelector("main").replaceWith(main); };
@@ -61,6 +59,8 @@ $.pages["Pressure Ulcers"] = (function () {
 			
 			var img = document.createElement("img");
 			button.appendChild(img);
+			img.style.maxWidth = "200px";
+			img.style.maxHeight = "200px";
 			img.src = "data:image/png;base64," + $v;
 			
 		});
