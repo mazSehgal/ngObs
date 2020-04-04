@@ -8,7 +8,8 @@ $.db = (function () {
 			if (xhr.readyState !== 4) return;
 			if (xhr.status !== 200) return;
 			$ftn(JSON.parse(xhr.responseText));
-			spinnerScreen.parentNode.removeChild(spinnerScreen);
+			clearTimeout(timer);
+			if (document.body.contains(spinnerScreen) spinnerScreen.parentNode.removeChild(spinnerScreen);
 		};
 		
 		//xhr.open("POST", $.const.root + "!/api.php", true);
@@ -17,11 +18,7 @@ $.db = (function () {
 		xhr.open("GET", $.const.root + "!/" + $in[0] + ".dat", true);
 		xhr.send();
 		
-		clearTimeout(timer);
-		img.style.visibility = "hidden";
-		timer = setTimeout(function () { img.style.visibility = "visible"; }, 1000);
-		
-		document.body.appendChild(spinnerScreen);
+		timer = setTimeout(function () { document.body.appendChild(spinnerScreen); }, 1000);
 		
 	};
 	
