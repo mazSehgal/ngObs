@@ -21,7 +21,9 @@ $.pages["Pressure Ulcers"] = (function () {
         			img.src = "data:image/png;base64," + $imageData;
 			},
 			
-			function cameraError ($e) {},
+			function cameraError ($e) {
+				console.log($e);
+			},
 			
 			{
 				quality: 50,
