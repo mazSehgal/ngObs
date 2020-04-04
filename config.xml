@@ -39,11 +39,12 @@
 	
 	<plugin name="cordova-plugin-dialogs" />
 	
-	<plugin name="cordova-plugin-inappbrowser" />	
+	<plugin name="cordova-plugin-inappbrowser" />
 	
-	<plugin name="phonegap-plugin-barcodescanner" />
 	<edit-config platform="ios" file="*-Info.plist" mode="merge" target="NSCameraUsageDescription"><string>To take pictures and scan barcodes</string></edit-config>
-
+	<plugin name="cordova-plugin-camera" />
+	<plugin name="phonegap-plugin-barcodescanner" />
+	
 	<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
 	
 </widget>
