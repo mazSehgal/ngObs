@@ -46,9 +46,13 @@ $.pages["Pressure Ulcers"] = (function () {
 		gallery.textContent = "";
 		store.images.forEach(function ($v) {
 			
-			var button = document.createElement("button");
-			gallery.appendChild(button);
-			button.ngpointerdown = function () {
+			var input = document.createElement("input");
+			gallery.appendChild(input);
+			input.type = "image";
+			input.style.maxWidth = "200px";
+			input.style.maxHeight = "200px";
+			input.src = "data:image/png;base64," + $v;
+			input.ngpointerdown = function () {
 				var main2 = document.createElement("main");
 				main2.ngpointerdown = function () { document.querySelector("main").replaceWith(main); };
 				var img = document.createElement("img");
@@ -56,12 +60,6 @@ $.pages["Pressure Ulcers"] = (function () {
 				img.src = "data:image/png;base64," + $v;
 				document.querySelector("main").replaceWith(main2);
 			};
-			
-			var img = document.createElement("img");
-			button.appendChild(img);
-			img.style.maxWidth = "200px";
-			img.style.maxHeight = "200px";
-			img.src = "data:image/png;base64," + $v;
 			
 		});
 	
