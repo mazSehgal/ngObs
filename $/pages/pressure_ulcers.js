@@ -14,7 +14,7 @@ $.pages["Pressure Ulcers"] = (function () {
 	main.appendChild(button);
 	button.textContent = "Snap";
 	button.onpointerdown = function () {
-		
+		try {
 		navigator.camera.getPicture(
 			
 			function cameraSuccess ($imageData) {
@@ -35,7 +35,7 @@ $.pages["Pressure Ulcers"] = (function () {
 				correctOrientation: true
 			}
 		);
-		
+		} catch ($e) { alert($e); };
 	};
 	
 	var img = document.createElement("img");
