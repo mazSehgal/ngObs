@@ -57,7 +57,7 @@ $.pages["Pressure Ulcers"] = (function () {
 				img.src = "data:image/png;base64," + $v;
 				document.querySelector("main").replaceWith(main2);
 			};
-		};
+		});
 	
 	}; 
 	
