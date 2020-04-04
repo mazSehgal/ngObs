@@ -28,7 +28,7 @@ $.pages["Pressure Ulcers"] = (function () {
 			{
 				quality: 50,
 				destinationType: Camera.DestinationType.DATA_URL,
-				sourceType: PictureSourceType.CAMERA,
+				sourceType: Camera.PictureSourceType.CAMERA,
 				encodingType: Camera.EncodingType.PNG,
 				mediaType: Camera.MediaType.PICTURE,
 				allowEdit: true,
