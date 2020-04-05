@@ -1,7 +1,7 @@
 $.pages["Search"] = (function () {
 
 	function forward ($in, $cb) {
-		form.clear();
+		form.reset();
 		back($cb);
 	};
 	
@@ -51,7 +51,7 @@ $.pages["Search"] = (function () {
 	form.appendChild(button);
 	button.textContent = "Clear";
 	button.ngpointerdown = function () {
-		form.clear();
+		form.reset();
 	};
 	
 	var button = document.createElement("button");
