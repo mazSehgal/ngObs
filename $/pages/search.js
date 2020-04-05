@@ -57,7 +57,7 @@ $.pages["Search"] = (function () {
 	var button = document.createElement("button");
 	form.appendChild(button);
 	button.textContent = "Go";
-	button.onpointerdown = function () {
+	button.ngpointerdown = function () {
 		$.nav.load("Search Results", {});
 	};
 	
