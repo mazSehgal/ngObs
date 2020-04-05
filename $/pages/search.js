@@ -14,6 +14,9 @@ $.pages["Search"] = (function () {
 	
 	var form = document.createElement("form");
 	main.appendChild(form);
+	form.style.display = "grid";
+	form.style.gridTemplateColumns = "auto auto";
+	form.style.gridGap = "10px";
 	
 	var div = document.createElement("div");
 	form.appendChild(div);
