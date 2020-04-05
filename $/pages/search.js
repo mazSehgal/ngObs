@@ -1,6 +1,7 @@
 $.pages["Search"] = (function () {
 
 	function forward ($in, $cb) {
+		form.clear();
 		back($cb);
 	};
 	
@@ -11,11 +12,53 @@ $.pages["Search"] = (function () {
 	
 	var main = document.createElement("main");
 	
+	var form = document.createElement("form");
+	main.appendChild(form);
+	
+	var div = document.createElement("div");
+	form.appendChild(div);
+	div.textContent = "Patient No.";
+	
+	var input = document.createElement("input");
+	form.appendChild(input);
+	input.type = "text";
+	
+	var div = document.createElement("div");
+	form.appendChild(div);
+	div.textContent = "Patient Name";
+	
+	var input = document.createElement("input");
+	form.appendChild(input);
+	input.type = "text";
+	
+	var div = document.createElement("div");
+	form.appendChild(div);
+	div.textContent = "Date of Birth";
+	
+	var input = document.createElement("input");
+	form.appendChild(input);
+	input.type = "text";
+	
+	var div = document.createElement("div");
+	form.appendChild(div);
+	div.textContent = "Postcode";
+	
+	var input = document.createElement("input");
+	form.appendChild(input);
+	input.type = "text";
+	
 	var button = document.createElement("button");
-	main.appendChild(button);
+	form.appendChild(button);
+	button.textContent = "Clear";
+	button.ngpointerdown = function () {
+		form.clear();
+	};
+	
+	var button = document.createElement("button");
+	form.appendChild(button);
 	button.textContent = "Go";
 	button.onpointerdown = function () {
-		$.nav.load("Search Results");
+		$.nav.load("Search Results", {});
 	};
 	
 	return {
