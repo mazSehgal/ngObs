@@ -66,6 +66,7 @@ $.pages["Patient List"] =  (function () {
 			div.appendChild(div2);
 			div2.style.display = "1 1 auto";
 			div2.style.display = "flex";
+			div2.style.flexWrap = "wrap";
 		
 			[
 				["Hospital No.", "HospitalNo"],
@@ -78,6 +79,7 @@ $.pages["Patient List"] =  (function () {
 				div2.appendChild(div3);
 				div3.style.flex = "1 1 10%";
 				div3.style.display = "flex";
+				div3.style.whiteSpace = "nowrap";
 
 					var div4 = document.createElement("div");
 					div3.appendChild(div4);
