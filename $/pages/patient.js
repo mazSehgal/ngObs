@@ -24,11 +24,37 @@ $.pages["Patient"] =  (function () {
 	main.style.flexDirection = "column";
 	main.style.overflow = "auto";
 	
-	var div = document.createElement("div");
-	main.appendChild(div);
-	div.style.flex = "0 0 auto";
-	div.textContent = "Information about this patient";
+	var ele = document.createElement("div");
+	main.appendChild(ele);
+	ele.style.flex = "0 0 auto";
+	ele.style.display = "grid";
+	ele.style.gridGap = "5px";
+	ele.style.gridTemplateColumns = "1fr 1fr auto";
+	ele.style.alignItems = "center";
+	ele.style.border = "1px solid grey";
+	ele.style.borderRadius = "10px";
+	ele.style.padding = "10px";
+	ele.style.backgroundColor = "white";
 	
+		var strong = document.createElement("strong");
+		ele.appendChild(strong);
+		strong.textContent = "Patient Summary";
+
+		var button = document.createElement("button");
+		ele.appendChild(button);
+		button.style.gridRow = "span 2";			
+		button.style.borderRadius = "999px";
+		button.textContent = ">";
+		button.onpointerdown = function () {
+			$.nav.load($v.Type, {"EPN": 1200856});
+		};
+
+		var em = document.createElement("em");
+		ele.appendChild(em);
+		em.style.fontSize = "0.7em";
+		em.style.borderBottom = "1px solid grey";
+		em.textContent = "Please complete full NEWS2 and pain scores hourly";
+
 	var datagrid = $.datagrid();
 	main.appendChild(datagrid);
 	datagrid.style.flex = "1 1 auto";
