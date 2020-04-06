@@ -32,44 +32,97 @@ $.pages["Patient List"] =  (function () {
 	datagrid.ftn = function ($v) {
 		
 		var ele = document.createElement("div");
-		ele.style.display = "grid";
-		ele.style.gridGap = "5px";
-		ele.style.gridTemplateColumns = "1fr 1fr 1fr 1fr auto";
-		ele.style.alignItems = "center";
+		ele.style.display = "flex";
 		ele.style.border = "1px solid grey";
 		ele.style.borderRadius = "10px";
 		ele.style.padding = "10px";
 		ele.style.backgroundColor = "white";
+		ele.style.alignItems = "center";
 		
-			var strong = document.createElement("strong");
-			ele.appendChild(strong);
-			strong.style.gridColumn = "span 4";
-			strong.textContent = $v.Surname + ", " + $v.Forename + " (" + $v.Title + ")";
+		var div = document.createElement("div");
+		ele.appendChild(div);
+		div.style.flex = "1 1 auto";
+			
+			var div2 = document.createElement("div");
+			div.appendChild(div2);
+		
+				var div3 = document.createElement("div");
+				div2.appendChild(div3);
+				div.textContent = $v.Surname + ", " + $v.Forename + " (" + $v.Title + ")";
+		
+				var div3 = document.createElement("div");
+				div2.appendChild(div3);
+				div.textContent = "Born";
+		
+			var div2 = document.createElement("div");
+			div.appendChild(div2);
+		
+				var div3 = document.createElement("div");
+				div2.appendChild(div3);
+		
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = "Code";
+				
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = "Description";
+		
+				var div3 = document.createElement("div");
+				div2.appendChild(div3);
+		
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = "Code";
+				
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = "Description";
+		
+				var div3 = document.createElement("div");
+				div2.appendChild(div3);
+		
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = "Code";
+				
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = "Description";
+		
+				var div3 = document.createElement("div");
+				div2.appendChild(div3);
+		
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = "Code";
+				
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = "Description";
+		
+				var div3 = document.createElement("div");
+				div2.appendChild(div3);
+		
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = "Code";
+				
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = "Description";
+		
+		var div = document.createElement("div");
+		ele.appendChild(div);
+		div.style.flex = "0 0 auto";
 		
 			var button = document.createElement("button");
-			ele.appendChild(button);
+			div.appendChild(button);
 			button.style.borderRadius = "999px";
-			button.style.gridRow = "span 2";
 			button.textContent = ">";
 			button.onpointerdown = function () {
 				$.nav.load("Patient", {"EPN":$v.EPN});
 			};
-
-			["Hospital No", "NHS No", "Born", "Bed"].forEach(function ($v2) {
-			
-				var div = document.createElement("div");
-				ele.appendChild(div);
-				div.style.whiteSpace = "nowrap";
-				div.style.color = "grey";
-				div.style.fontSize = "0.7em";
-
-					var em = document.createElement("em");
-					div.appendChild(em);
-					em.textContent = $v2 + " ";
-							
-					div.appendChild(document.createTextNode($v[$v2]));
-				
-			});
 								
 		return ele;
 		
