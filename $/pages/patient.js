@@ -27,6 +27,7 @@ $.pages["Patient"] =  (function () {
 	var div = document.createElement("div");
 	main.appendChild(div);
 	div.style.flex = "0 0 auto";
+	div.textContent = "Information about this patient";
 	
 	var datagrid = $.datagrid();
 	main.appendChild(datagrid);
