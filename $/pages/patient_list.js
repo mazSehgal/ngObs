@@ -53,6 +53,8 @@ $.pages["Patient List"] =  (function () {
 				var div3 = document.createElement("div");
 				div2.appendChild(div3);
 				div3.style.flex = "1 1 auto";
+				div3.style.fontWeight = "bold";
+				div3.style.fontSize = "1.5em";
 				div3.textContent = $v.Surname + ", " + $v.Forename + " (" + $v.Title + ")";
 		
 				var div3 = document.createElement("div");
