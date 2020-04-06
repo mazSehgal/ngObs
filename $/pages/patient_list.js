@@ -67,6 +67,7 @@ $.pages["Patient List"] =  (function () {
 			div2.style.display = "1 1 auto";
 			div2.style.display = "flex";
 			div2.style.flexWrap = "wrap";
+			div2.style.justifyContent = "space-between";
 		
 			[
 				["Hospital No.", "HospitalNo"],
@@ -77,8 +78,6 @@ $.pages["Patient List"] =  (function () {
 
 				var div3 = document.createElement("div");
 				div2.appendChild(div3);
-				div3.style.flex = "1 1 10%";
-				div3.style.display = "flex";
 				div3.style.whiteSpace = "nowrap";
 				div3.style.padding = "5px";
 
