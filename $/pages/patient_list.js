@@ -80,6 +80,7 @@ $.pages["Patient List"] =  (function () {
 				div3.style.flex = "1 1 10%";
 				div3.style.display = "flex";
 				div3.style.whiteSpace = "nowrap";
+				div3.style.padding = "5px";
 
 					var em = document.createElement("em");
 					div3.appendChild(em);
