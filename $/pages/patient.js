@@ -24,8 +24,13 @@ $.pages["Patient"] =  (function () {
 	main.style.flexDirection = "column";
 	main.style.overflow = "auto";
 	
+	var div = document.createElement("div");
+	main.appendChild(div);
+	div.style.flex = "0 0 auto";
+	
 	var datagrid = $.datagrid();
 	main.appendChild(datagrid);
+	datagrid.style.flex = "1 1 auto";
 	datagrid.style.display = "grid";
 	datagrid.style.gridGap = "3px";
 	datagrid.style.gridTemplateColumns = "repeat(auto-fit, minmax(350px, 1fr))";
