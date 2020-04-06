@@ -47,7 +47,7 @@ $.pages["Patient"] =  (function () {
 		button.style.borderRadius = "999px";
 		button.textContent = ">";
 		button.onpointerdown = function () {
-			$.nav.load($v.Type, {"EPN": 1200856});
+			$.nav.load("Patient Summary", {"EPN": 1200856});
 		};
 
 		var div = document.createElement("div");
