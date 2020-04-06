@@ -54,26 +54,26 @@ $.pages["Patient List"] =  (function () {
 				div2.appendChild(div3);
 				div3.textContent = $v.Born;
 		
+			var div2 = document.createElement("div");
+			div.appendChild(div2);
+		
 			[
 				["Hospital No.", "HospitalNo"],
 				["NHS No.", "NHSNo"],
 				["Born", "Born"],
 				["Bed", "Bed"]
 			].forEach(function ($v2) {
-		
-				var div2 = document.createElement("div");
-				div.appendChild(div2);
 
-					var div3 = document.createElement("div");
-					div2.appendChild(div3);
+				var div3 = document.createElement("div");
+				div2.appendChild(div3);
 
-						var div4 = document.createElement("div");
-						div3.appendChild(div4);
-						div4.textContent = $v2[0];
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = $v2[0];
 
-						var div4 = document.createElement("div");
-						div3.appendChild(div4);
-						div4.textContent = $v[$v2[1]];
+					var div4 = document.createElement("div");
+					div3.appendChild(div4);
+					div4.textContent = $v[$v2[1]];
 				
 			});
 				
