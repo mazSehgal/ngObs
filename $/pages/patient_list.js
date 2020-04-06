@@ -72,6 +72,7 @@ $.pages["Patient List"] =  (function () {
 
 				var div3 = document.createElement("div");
 				div2.appendChild(div3);
+				div3.style.flex = "1 1 10%";
 
 					var div4 = document.createElement("div");
 					div3.appendChild(div4);
