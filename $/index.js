@@ -137,6 +137,8 @@ setTimeout(function () {
 		"$/pages/pressure_ulcers_add.js",
 		"$/pages/pressure_ulcers_view.js",
 		"$/pages/locations.js",
+		"$/pages/patient_summary.js",
+		"$/pages/patient_summary_add.js",
 		"$/pages/search.js",
 		"$/pages/search_results.js",
 		"$/pages/admin.js",
