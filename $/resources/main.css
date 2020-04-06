@@ -1,4 +1,4 @@
-* { -webkit-overflow-scrolling:touch; box-sizing:border-box; }
+* { -webkit-overflow-scrolling:touch; box-sizing:border-box; overflow:auto; }
 
 @media (max-width:400px), (max-height:400px) { body { font-size:0.7em; } }
 
