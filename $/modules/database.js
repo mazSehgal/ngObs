@@ -5,11 +5,14 @@ $.db = (function () {
 		
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function () {
+			
 			if (xhr.readyState !== 4) return;
-			if (xhr.status !== 200) return;
-			$ftn(JSON.parse(xhr.responseText));
 			clearTimeout(timer);
 			if (document.body.contains(spinnerScreen) === true) spinnerScreen.parentNode.removeChild(spinnerScreen);
+			
+			if (xhr.status !== 200) return;
+			$ftn(JSON.parse(xhr.responseText));
+			
 		};
 		
 		//xhr.open("POST", $.const.root + "!/api.php", true);
