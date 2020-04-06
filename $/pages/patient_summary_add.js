@@ -18,7 +18,11 @@ $.pages["Patient Summary Add"] = (function () {
 	main.appendChild(button);
 	button.textContent = "Save";
 	button.ngpointerdown = function () {
-		$.nav.back();
+		
+		$.db.query(["patientSummaryAdd", {}], function ($d) {
+			$.nav.back("Patient");
+		});
+		
 	};
   
 	return {
