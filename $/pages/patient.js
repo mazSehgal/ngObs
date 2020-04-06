@@ -34,6 +34,7 @@ $.pages["Patient"] =  (function () {
 	ele.style.border = "1px solid grey";
 	ele.style.borderRadius = "10px";
 	ele.style.padding = "10px";
+	ele.style.margin = "5px";
 	ele.style.backgroundColor = "white";
 	
 		var strong = document.createElement("strong");
