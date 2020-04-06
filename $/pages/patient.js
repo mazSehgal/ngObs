@@ -50,6 +50,7 @@ $.pages["Patient"] =  (function () {
 		};
 
 		var div = document.createElement("div");
+		ele.appendChild(div);
 		div.textContent = "Please complete full NEWS2 and pain scores hourly";
 
 	var datagrid = $.datagrid();
