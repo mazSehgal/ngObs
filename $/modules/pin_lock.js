@@ -16,7 +16,7 @@ $.const.PIN = "1234";
   function lockScreen () {
     if (pinScreen.parentElement !== null) return;
     if (document.querySelector("main[nolock]") !== null) return;
-    if (new Date() - timer < 1 * 60 * 1000) return;
+    if (new Date() - timer < 15 * 60 * 1000) return;
     document.body.appendChild(pinScreen);
   };
 
