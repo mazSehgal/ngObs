@@ -49,11 +49,8 @@ $.pages["Patient"] =  (function () {
 			$.nav.load($v.Type, {"EPN": 1200856});
 		};
 
-		var em = document.createElement("em");
-		ele.appendChild(em);
-		em.style.fontSize = "0.7em";
-		em.style.borderBottom = "1px solid grey";
-		em.textContent = "Please complete full NEWS2 and pain scores hourly";
+		var div = document.createElement("div");
+		div.textContent = "Please complete full NEWS2 and pain scores hourly";
 
 	var datagrid = $.datagrid();
 	main.appendChild(datagrid);
