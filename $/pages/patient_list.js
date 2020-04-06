@@ -62,6 +62,8 @@ $.pages["Patient List"] =  (function () {
 		
 			var div2 = document.createElement("div");
 			div.appendChild(div2);
+			div2.style.display = "1 1 auto";
+			div2.style.display = "flex";
 		
 			[
 				["Hospital No.", "HospitalNo"],
@@ -73,6 +75,7 @@ $.pages["Patient List"] =  (function () {
 				var div3 = document.createElement("div");
 				div2.appendChild(div3);
 				div3.style.flex = "1 1 10%";
+				div3.style.display = "flex";
 
 					var div4 = document.createElement("div");
 					div3.appendChild(div4);
