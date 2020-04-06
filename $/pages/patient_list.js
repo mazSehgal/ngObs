@@ -66,7 +66,8 @@ $.pages["Patient List"] =  (function () {
 			div.appendChild(div2);
 			div2.style.display = "1 1 auto";
 			div2.style.display = "grid";
-			div2.style.gridTemplateColumns = "repeat(auto-fit, minmax(200px, 1fr))";
+			div2.style.gridTemplateColumns = "repeat(auto-fit, minmax(100px, 1fr))";
+			div2.style.gridGap = "5px";
 		
 			[
 				["Hospital No.", "HospitalNo"],
@@ -77,7 +78,6 @@ $.pages["Patient List"] =  (function () {
 
 				var div3 = document.createElement("div");
 				div2.appendChild(div3);
-				div3.style.whiteSpace = "nowrap";
 
 					var em = document.createElement("em");
 					div3.appendChild(em);
