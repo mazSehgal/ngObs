@@ -81,13 +81,12 @@ $.pages["Patient List"] =  (function () {
 				div3.style.display = "flex";
 				div3.style.whiteSpace = "nowrap";
 
-					var div4 = document.createElement("div");
-					div3.appendChild(div4);
-					div4.textContent = $v2[0];
+					var em = document.createElement("em");
+					div3.appendChild(em);
+					em.style.paddingRight = "5px";
+					em.textContent = $v2[0];
 
-					var div4 = document.createElement("div");
-					div3.appendChild(div4);
-					div4.textContent = $v[$v2[1]];
+					div3.appendChild(document.createTextNode($v[$v2[1]]));
 				
 			});
 				
