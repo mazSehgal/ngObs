@@ -43,6 +43,7 @@ $.pages["Patient List"] =  (function () {
 		ele.appendChild(div);
 		div.style.flex = "1 1 auto";
 		div.style.display = "flex";
+		div.style.flexDirection = "column";
 			
 			var div2 = document.createElement("div");
 			div.appendChild(div2);
