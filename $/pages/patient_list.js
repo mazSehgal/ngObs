@@ -42,16 +42,21 @@ $.pages["Patient List"] =  (function () {
 		var div = document.createElement("div");
 		ele.appendChild(div);
 		div.style.flex = "1 1 auto";
+		div.style.display = "flex";
 			
 			var div2 = document.createElement("div");
 			div.appendChild(div2);
+			div2.style.display = "1 1 auto";
+			div2.style.display = "flex";
 		
 				var div3 = document.createElement("div");
 				div2.appendChild(div3);
+				div3.style.display = "1 1 auto";
 				div3.textContent = $v.Surname + ", " + $v.Forename + " (" + $v.Title + ")";
 		
 				var div3 = document.createElement("div");
 				div2.appendChild(div3);
+				div3.style.display = "1 1 auto";
 				div3.textContent = $v.Born;
 		
 			var div2 = document.createElement("div");
