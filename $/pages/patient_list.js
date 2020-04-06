@@ -27,7 +27,7 @@ $.pages["Patient List"] =  (function () {
 	main.appendChild(datagrid);
 	datagrid.style.display = "grid";
 	datagrid.style.gridGap = "3px";
-	datagrid.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 1fr))";
+	datagrid.style.gridTemplateColumns = "repeat(auto-fit, minmax(350px, 1fr))";
 	
 	datagrid.ftn = function ($v) {
 		
